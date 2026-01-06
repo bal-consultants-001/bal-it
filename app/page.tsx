@@ -34,7 +34,7 @@ export default function Home() {
         </p>
       </Section>
 
-      <Section id="about" title="About BAL-IT">
+      <Section id="about" title="About BAL-IT" className="bg-white">
         With over 10 years of industry experience and more than 20 years of
         personal IT expertise, BAL-IT brings professional-grade problem solving
         into the home support market.
