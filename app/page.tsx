@@ -41,14 +41,16 @@ export default function Home() {
       </Section>
 
       <Section id="services" title="Services">
-        • PC & Laptop Repairs  
-        • Virus Removal & Security  
-        • Home Network Setup  
-        • Android Device Support  
-        • Remote Troubleshooting  
+		  <ul className="space-y-4 text-xl font-semibold">
+			<li>• PC & Laptop Repairs</li>
+			<li>• Virus Removal & Security</li>
+			<li>• Home Network Setup</li>
+			<li>• Android Device Support</li>
+			<li>• Remote Troubleshooting</li>
+		  </ul> 
       </Section>
 
-      <Section id="pricing" title="Pricing">
+      <Section id="pricing" title="Pricing" className="bg-white">
         Transparent, fair pricing based on the service required.  
         Remote support and in-person visits available.
       </Section>
