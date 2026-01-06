@@ -8,14 +8,30 @@ export default function Home() {
     <>
       <Navbar />
 
-      <Section id="intro" title="Home IT Support Made Simple">
-		<Image src="/images/backdrop.jpg" alt="BAL-IT Support" fill priority className="object-cover opacity-70" />
-		  <div className="absolute z-10 text-center px-4 max-w-2xl">
-			<p className="mb-6 text-lg">
-			  BAL-IT provides reliable, professional at-home and remote IT support
-			  for laptops, PCs, tablets, Android phones, and limited Apple devices.
-			</p>
-		  </div>
+      <Section
+        id="intro"
+        title="Home IT Support Made Simple"
+        background={
+          <>
+            <Image
+              src="/images/backdrop.jpg"
+              alt="BAL-IT IT Support"
+              fill
+              priority
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40" />
+          </>
+        }
+      >
+        <p className="mb-6">
+          BAL-IT provides reliable, professional at-home and remote IT support
+          for laptops, PCs, tablets, Android phones, and limited Apple devices.
+        </p>
+        <p>
+          In-person visits and secure remote assistance are available to suit
+          your needs.
+        </p>
       </Section>
 
       <Section id="about" title="About BAL-IT">
