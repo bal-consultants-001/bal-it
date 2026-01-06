@@ -1,16 +1,20 @@
 import { ReactNode } from "react";
 
+type SectionProps = {
+  id: string;
+  title: string;
+  children: ReactNode;
+  background?: ReactNode;
+  className?: string;
+};
+
 export default function Section({
   id,
   title,
   children,
   background,
-}: {
-  id: string;
-  title: string;
-  children: ReactNode;
-  background?: ReactNode;
-}) {
+  className = "",
+}: SectionProps) {
   return (
     <section
       id={id}
@@ -24,7 +28,7 @@ export default function Section({
       )}
 
       {/* Content */}
-      <div className="max-w-4xl mx-auto w-full">
+      <div className="max-w-4xl mx-auto">
         <div className="bg-black/70 text-white p-8 rounded-xl shadow-lg">
           <h2 className="text-3xl font-bold mb-6">{title}</h2>
           <div className="text-lg leading-relaxed">{children}</div>
