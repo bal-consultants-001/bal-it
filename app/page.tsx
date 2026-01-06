@@ -41,15 +41,8 @@ export default function Home() {
       </Section>
 
       <Section id="services" title="Services">
-		  <ul className="space-y-4 text-xl font-semibold">
-			<li>• PC & Laptop Repairs</li>
-			<li>• Virus Removal & Security</li>
-			<li>• Home Network Setup</li>
-			<li>• Android Device Support</li>
-			<li>• Remote Troubleshooting</li>
-		  </ul>
-		  <ul>
-			<h2>
+	  		<ul>
+			<h2 className="font-bold">
 			Friendly Home IT Support You Can Rely On
 			</h2>
 			<p>
@@ -57,6 +50,15 @@ export default function Home() {
 				Whether something isn’t working properly or you just want help setting things up the right way, we’re here to help.
 			</p>
 		  </ul>
+		  <div className="py-20"></div>
+		  <ul className="space-y-4 text-xl font-semibold">
+			<li>• PC & Laptop Repairs</li>
+			<li>• Virus Removal & Security</li>
+			<li>• Home Network Setup</li>
+			<li>• Android Device Support</li>
+			<li>• Remote Troubleshooting</li>
+		  </ul>
+
       </Section>
 
       <Section id="pricing" title="Pricing" className="bg-white">
