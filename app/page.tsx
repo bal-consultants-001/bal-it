@@ -9,7 +9,7 @@ export default function Home() {
       <Navbar />
 
       <Section id="intro" title="Home IT Support Made Simple">
-		<Image src="/images/backdrop.jpg" alt="Ad Blocker" fill className="object-cover opacity-30" />
+		<Image src="/images/backdrop.jpg" alt="backdrop" fill className="object-cover opacity-70" />
 		  <div className="absolute z-10 text-center px-4 max-w-2xl">
 			<p className="mb-6 text-lg">
 			  BAL-IT provides reliable, professional at-home and remote IT support
