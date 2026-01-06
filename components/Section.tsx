@@ -14,11 +14,11 @@ export default function Section({
   return (
     <section
       id={id}
-      className="relative min-h-screen flex items-center px-6"
+      className="relative py-24 px-6 overflow-hidden"
     >
       {/* Background layer */}
       {background && (
-        <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-x-0 top-1/2 h-[120%] -translate-y-1/2 -z-10">
           {background}
         </div>
       )}
