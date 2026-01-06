@@ -14,7 +14,7 @@ export default function Section({
   return (
     <section
       id={id}
-      className="relative py-24 px-6 overflow-hidden"
+      className={`relative py-24 px-6 overflow-hidden ${className}`}
     >
       {/* Background layer */}
       {background && (
