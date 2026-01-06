@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Section from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
+import Image from "next/image";
 
 export default function Home() {
   return (
