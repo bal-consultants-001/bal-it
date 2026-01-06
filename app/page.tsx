@@ -47,7 +47,16 @@ export default function Home() {
 			<li>• Home Network Setup</li>
 			<li>• Android Device Support</li>
 			<li>• Remote Troubleshooting</li>
-		  </ul> 
+		  </ul>
+		  <ul>
+			<h2>
+			Friendly Home IT Support You Can Rely On
+			</h2>
+			<p>
+				Technology should make life easier — not more stressful. Our team provides clear, patient, one-to-one IT support for homes, helping you get the most out of your technology without the jargon.
+				Whether something isn’t working properly or you just want help setting things up the right way, we’re here to help.
+			</p>
+		  </ul>
       </Section>
 
       <Section id="pricing" title="Pricing" className="bg-white">
