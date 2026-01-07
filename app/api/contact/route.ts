@@ -3,33 +3,41 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, subject, message } = await req.json();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 }
       );
     }
 
+    if (message.length < 30) {
+      return NextResponse.json(
+        { error: "Message must be at least 30 characters" },
+        { status: 400 }
+      );
+    }
+
     const transporter = nodemailer.createTransport({
-      host: "smtp.zoho.eu", // use smtp.zoho.com if outside EU
+      host: "smtp.zoho.eu",
       port: 465,
       secure: true,
       auth: {
-        user: 'bal-admin@bal-it.com',
+        user: "bal-admin@bal-it.com",
         pass: process.env.ZOHO_APP!,
       },
     });
 
     await transporter.sendMail({
-      from: 'information@bal-it.com',
-      to: 'information@bal-it.com',
+      from: '"BAL-IT Website" <information@bal-it.com>',
+      to: "information@bal-it.com",
       replyTo: email,
-      subject: `New BAL-IT Support Request from ${name}`,
+      subject: `[${subject}] New BAL-IT Support Request from ${name}`,
       text: `
 Name: ${name}
 Email: ${email}
+Subject: ${subject}
 
 Message:
 ${message}
