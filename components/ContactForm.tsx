@@ -64,7 +64,7 @@ export default function ContactForm() {
       <input name="name" required placeholder="Name" className="w-full border p-2" />
       <input name="email" required type="email" placeholder="Email" className="w-full border p-2" />
 
-      <select name="subject" required className="w-full border p-2" defaultValue="">
+      <select name="subject" required className="w-full border p-2 text-black" defaultValue="">
         <option value="" disabled>Select a subject</option>
         <option value="General IT Support">General IT Support</option>
         <option value="PC / Laptop Repair">PC / Laptop Repair</option>

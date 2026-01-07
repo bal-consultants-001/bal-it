@@ -10,10 +10,7 @@ export async function POST(req: Request) {
     }
 
     if (message.length < 30) {
-      return NextResponse.json(
-        { error: "Message too short" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Message too short" }, { status: 400 });
     }
 
     // Verify reCAPTCHA
@@ -45,6 +42,9 @@ export async function POST(req: Request) {
       },
     });
 
+    /* ========================
+       1) INTERNAL EMAIL
+       ======================== */
     await transporter.sendMail({
       from: '"BAL-IT Website" <information@bal-it.com>',
       to: "information@bal-it.com",
@@ -57,6 +57,32 @@ Subject: ${subject}
 
 Message:
 ${message}
+      `,
+    });
+
+    /* ========================
+       2) AUTO-REPLY EMAIL
+       ======================== */
+    await transporter.sendMail({
+      from: '"BAL-IT Support" <information@bal-it.com>',
+      to: email,
+      subject: "We’ve received your message – BAL-IT",
+      text: `
+		Hi ${name},
+
+		Thanks for contacting BAL-IT.
+
+		We’ve received your message regarding:
+		"${subject}"
+
+		Our team will review your request and get back to you as soon as possible.
+		Typical response time is within 1 business day.
+
+		If your enquiry is urgent, please reply to this email.
+
+		Kind regards,
+		BAL-IT Support
+		https://bal-it.com
       `,
     });
 
