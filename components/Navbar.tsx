@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 const menuItems = [
   { name: "Home", to: "intro" },
   { name: "About", to: "about" },
+  { name: "Why BAL-IT", to: "why-choose-us" },
   { name: "Services", to: "services" },
   { name: "Pricing", to: "pricing" },
   { name: "Contact", to: "contact" },

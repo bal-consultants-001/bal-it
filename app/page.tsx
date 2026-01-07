@@ -35,12 +35,59 @@ export default function Home() {
       </Section>
 
       <Section id="about" title="About BAL-IT" className="bg-white">
-        With over 10 years of industry experience and more than 20 years of
-        personal IT expertise, BAL-IT brings professional-grade problem solving
-        into the home support market.
-      </Section>
+		  BAL-IT provides friendly, local IT support with a strong focus on helping
+		  people use their technology safely, confidently, and without frustration.
+		  We understand that devices play an important role in everyday life, and our
+		  priority is to support and protect our clients as they interact with their
+		  technology on a daily basis.
+		  <br /><br />
+		  With over 10 years of industry experience and more than 20 years of personal
+		  IT knowledge, our team brings professional-grade problem solving into the home
+		  support environment. This blend of real-world experience puts us in a strong
+		  position to assist with a wide range of technology issues while maintaining a
+		  consistently high standard of service.
+		  <br /><br />
+		  We take pride in explaining solutions clearly and without unnecessary jargon,
+		  ensuring our clients always understand what has been done and why. Our team
+		  is professional, patient, and respectful of your home, time, and privacy.
+		  <br /><br />
+		  As a locally based service, we focus on building long-term relationships with
+		  the people and communities we support. Whether you need help with a one-off
+		  issue or ongoing support, BAL-IT is here to help.
+	  </Section>
+	  
+	  <Section id="why-choose-us" title="Why Choose BAL-IT" className="bg-white">
+		  <ul className="list-disc pl-6 space-y-3">
+			<li>
+			  <strong>Local, Personal Service</strong> – We’re a locally based team that
+			  values long-term relationships and provides friendly, reliable support you
+			  can trust.
+			</li>
+			<li>
+			  <strong>Experienced & Knowledgeable</strong> – With over 10 years of
+			  industry experience and decades of hands-on personal IT knowledge, we’re
+			  well equipped to handle a wide range of technology issues.
+			</li>
+			<li>
+			  <strong>Clear, Jargon-Free Explanations</strong> – We explain everything in
+			  plain English, so you always understand what’s been done and how to use
+			  your technology confidently.
+			</li>
+			<li>
+			  <strong>Focused on Safety & Security</strong> – We help protect your
+			  devices, data, and online presence, giving you peace of mind in everyday
+			  digital life.
+			</li>
+			<li>
+			  <strong>High-Quality, Respectful Support</strong> – Our team is patient,
+			  professional, and respectful of your home, your time, and your privacy.
+			</li>
+		  </ul>
+		</Section>
 
-      <Section id="services" title="Services">
+
+
+      <Section id="services" title="Services" className="bg-black">
 	  		<ul>
 			<h2 className="font-bold py-4">
 			Friendly Home IT Support You Can Rely On
@@ -124,7 +171,7 @@ export default function Home() {
         Remote support and in-person visits available.
       </Section>
 
-      <Section id="contact" title="Contact BAL-IT">
+      <Section id="contact" title="Contact BAL-IT" className="bg-black">
         <p className="mb-4">
           📧 support@bal-it.co.uk  
           📞 07XXXXXXXX
