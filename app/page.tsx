@@ -169,6 +169,19 @@ export default function Home() {
       <Section id="pricing" title="Pricing" className="bg-white">
         Transparent, fair pricing based on the service required.  
         Remote support and in-person visits available.
+		
+		<ul>
+		  <h2 className="font-bold py-4">
+		    Our Pricing Structure for home users
+		  </h2>
+		  <p>
+			We offer a free 15 minute remote consultation where we discuss your needs and whether we are likely to be able to help.
+			Our standard pricing is £45/hour for remote and in person calls after that.
+			For in person visits, ff you are more than 30 minutes from our facility in Llantwit Major we will charge a minimum £15 (20 minutes) transport cost, this will be included in the first hour of support.
+		  </p>
+		</ul>
+		<div className="py-6"></div>
+
       </Section>
 
       <Section id="contact" title="Contact BAL-IT" className="bg-black">
