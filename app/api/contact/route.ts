@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     });
 
     await transporter.sendMail({
-      from: `"BAL-IT Website" <${process.env.EMAIL_USER}>`,
+      from: 'information@bal-it.com',
       to: 'information@bal-it.com',
       replyTo: email,
       subject: `New BAL-IT Support Request from ${name}`,
