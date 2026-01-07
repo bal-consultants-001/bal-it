@@ -47,7 +47,7 @@ export default function Home() {
 			</h2>
 			<p>
 				Technology should make life easier — not more stressful. Our team provides clear, patient, one-to-one IT support for homes, helping you get the most out of your technology without the jargon.
-				Whether something isn’t working properly or you just want help setting things up the right way, we’re here to help.
+				Whether something isn’t working properly or you just want help setting things up the right way, we’re here to help. We offer in person or remote assistance for most tech related issues.
 			</p>
 		  </ul>
 		  <div className="py-6"></div>
@@ -86,6 +86,17 @@ export default function Home() {
 		
 		<ul>
 		  <h2 className="font-bold py-4">
+		    Virus Removal & Security
+		  </h2>
+		  <p>
+			The more time we spend online the more likely we are to run into viruses or malware designed to damage our systems or cause us issues.
+			We can help with virus detection and removal as well as general improvements to your digital security setup to keep you safe.
+		  </p>
+		</ul>
+		<div className="py-6"></div>
+		
+		<ul>
+		  <h2 className="font-bold py-4">
 			Online Safety & Cyber Security Advice
 		  </h2>
 		  <p>
@@ -105,17 +116,6 @@ export default function Home() {
 		  </p>
 		</ul>
 		<div className="py-6"></div>
-
-
-
-
-		  <ul className="space-y-4 text-xl font-semibold">
-			<li>• PC & Laptop Repairs</li>
-			<li>• Virus Removal & Security</li>
-			<li>• Home Network Setup</li>
-			<li>• Android Device Support</li>
-			<li>• Remote Troubleshooting</li>
-		  </ul>
 
       </Section>
 
