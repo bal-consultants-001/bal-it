@@ -18,13 +18,13 @@ export async function POST(req: Request) {
       secure: true,
       auth: {
         user: 'bal-admin@bal-it.com',
-        pass: 'information@bal-it.com',
+        pass: process.env.ZOHO_APP!,
       },
     });
 
     await transporter.sendMail({
       from: `"BAL-IT Website" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER,
+      to: 'information@bal-it.com',
       replyTo: email,
       subject: `New BAL-IT Support Request from ${name}`,
       text: `
