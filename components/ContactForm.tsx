@@ -18,45 +18,59 @@ export default function ContactForm() {
 	  e.preventDefault();
 	  setStatus("Verifying...");
 
-	  if (!(window as any).grecaptcha) {
+	  const grecaptcha = (window as any).grecaptcha;
+
+	  if (!grecaptcha) {
 		setStatus("reCAPTCHA failed to load.");
 		return;
 	  }
 
-	  const token = await (window as any).grecaptcha.execute(
-		process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
-		{ action: "submit" }
-	  );
+	  try {
+		const token = await new Promise<string>((resolve, reject) => {
+		  grecaptcha.ready(() => {
+			grecaptcha
+			  .execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {
+				action: "submit",
+			  })
+			  .then(resolve)
+			  .catch(reject);
+		  });
+		});
 
-	  if (!token) {
+		if (!token) {
+		  setStatus("reCAPTCHA verification failed.");
+		  return;
+		}
+
+		setStatus("Sending...");
+
+		const formData = new FormData(e.currentTarget);
+		const message = String(formData.get("message") || "");
+
+		const res = await fetch("/api/contact", {
+		  method: "POST",
+		  headers: { "Content-Type": "application/json" },
+		  body: JSON.stringify({
+			name: formData.get("name"),
+			email: formData.get("email"),
+			subject: formData.get("subject"),
+			message,
+			recaptchaToken: token,
+		  }),
+		});
+
+		if (res.ok) {
+		  setStatus("Message sent successfully!");
+		  e.currentTarget.reset();
+		} else {
+		  setStatus("Failed to send message.");
+		}
+	  } catch (err) {
+		console.error("reCAPTCHA error:", err);
 		setStatus("reCAPTCHA verification failed.");
-		return;
-	  }
-
-	  setStatus("Sending...");
-
-	  const formData = new FormData(e.currentTarget);
-	  const message = String(formData.get("message") || "");
-
-	  const res = await fetch("/api/contact", {
-		method: "POST",
-		headers: { "Content-Type": "application/json" },
-		body: JSON.stringify({
-		  name: formData.get("name"),
-		  email: formData.get("email"),
-		  subject: formData.get("subject"),
-		  message,
-		  recaptchaToken: token,
-		}),
-	  });
-
-	  if (res.ok) {
-		setStatus("Message sent successfully!");
-		e.currentTarget.reset();
-	  } else {
-		setStatus("Failed to send message.");
 	  }
 	}
+
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
