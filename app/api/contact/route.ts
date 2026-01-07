@@ -3,19 +3,35 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const { name, email, subject, message } = await req.json();
+    const { name, email, subject, message, recaptchaToken } = await req.json();
 
-    if (!name || !email || !subject || !message) {
-      return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 }
-      );
+    if (!name || !email || !subject || !message || !recaptchaToken) {
+      return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }
 
     if (message.length < 30) {
       return NextResponse.json(
-        { error: "Message must be at least 30 characters" },
+        { error: "Message too short" },
         { status: 400 }
+      );
+    }
+
+    // Verify reCAPTCHA
+    const captchaRes = await fetch(
+      "https://www.google.com/recaptcha/api/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+      }
+    );
+
+    const captchaData = await captchaRes.json();
+
+    if (!captchaData.success || captchaData.score < 0.5) {
+      return NextResponse.json(
+        { error: "reCAPTCHA verification failed" },
+        { status: 403 }
       );
     }
 
@@ -46,9 +62,9 @@ ${message}
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Zoho mail error:", error);
+    console.error("Contact error:", error);
     return NextResponse.json(
-      { error: "Failed to send message" },
+      { error: "Server error" },
       { status: 500 }
     );
   }

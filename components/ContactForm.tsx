@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 
+declare global {
+  interface Window {
+    grecaptcha: any;
+  }
+}
+
 export default function ContactForm() {
   const [status, setStatus] = useState("");
   const [messageLength, setMessageLength] = useState(0);
@@ -10,6 +16,18 @@ export default function ContactForm() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setStatus("Verifying...");
+
+    if (!window.grecaptcha) {
+      setStatus("reCAPTCHA not ready. Please try again.");
+      return;
+    }
+
+    const token = await window.grecaptcha.execute(
+      process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+      { action: "submit" }
+    );
+
     setStatus("Sending...");
 
     const formData = new FormData(e.currentTarget);
@@ -22,14 +40,13 @@ export default function ContactForm() {
 
     const res = await fetch("/api/contact", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         name: formData.get("name"),
         email: formData.get("email"),
         subject: formData.get("subject"),
         message,
+        recaptchaToken: token,
       }),
     });
 
@@ -38,37 +55,17 @@ export default function ContactForm() {
       e.currentTarget.reset();
       setMessageLength(0);
     } else {
-      setStatus("Failed to send message. Please try again.");
+      setStatus("Verification failed or message blocked.");
     }
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
-      <input
-        name="name"
-        required
-        placeholder="Name"
-        className="w-full border p-2"
-      />
+      <input name="name" required placeholder="Name" className="w-full border p-2" />
+      <input name="email" required type="email" placeholder="Email" className="w-full border p-2" />
 
-      <input
-        name="email"
-        required
-        type="email"
-        placeholder="Email"
-        className="w-full border p-2"
-      />
-
-      {/* Subject dropdown */}
-      <select
-        name="subject"
-        required
-        className="w-full border p-2"
-        defaultValue=""
-      >
-        <option value="" disabled>
-          Select a subject
-        </option>
+      <select name="subject" required className="w-full border p-2" defaultValue="">
+        <option value="" disabled>Select a subject</option>
         <option value="General IT Support">General IT Support</option>
         <option value="PC / Laptop Repair">PC / Laptop Repair</option>
         <option value="Virus & Security Issues">Virus & Security Issues</option>
