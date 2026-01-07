@@ -154,8 +154,8 @@ export default function Business() {
 			<table className="w-full border border-gray-300 text-left">
 			  <thead className="bg-gray-100">
 				<tr>
-				  <th className="border px-4 py-2">Home Users</th>
-				  <th className="border px-4 py-2">Business Users</th>
+				  <th className="border px-4 py-2 text-black">Home Users</th>
+				  <th className="border px-4 py-2 text-black">Business Users</th>
 				</tr>
 			  </thead>
 			  <tbody>
