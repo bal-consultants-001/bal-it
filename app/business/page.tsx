@@ -149,36 +149,7 @@ export default function Business() {
         <div className="py-6"></div>
       </Section>
 
-		<Section id="pricing" title="Business Pricing" className="bg-white">
-		  Transparent, professional pricing designed for local businesses.
-		  <ul>
-			<h2 className="font-bold py-4">
-			  Business Support Rates
-			</h2>
-			<p>
-			  Our standard rate for business IT support is <strong>£75 per hour</strong>,
-			  covering both remote and on-site assistance.
-			  <br /><br />
-			  For businesses that require regular support, we can offer tailored ongoing
-			  support arrangements designed to provide priority assistance and improved
-			  cost predictability.
-			  <br /><br />
-			  Project-based work is quoted individually based on scope, complexity, and
-			  timescales, ensuring clear expectations before work begins.
-			</p>
-		  </ul>
-		</Section>
-
-
-      <Section id="contact" title="Contact BAL-IT" className="bg-white">
-        <p className="mb-4">
-          📧 support@bal-it.co.uk  
-          📞 07XXXXXXXX
-        </p>
-        <ContactForm />
-      </Section>
-	  
-	  <Section id="comparison" title="Home vs Business IT Support" className="bg-white">
+	  <Section id="comparison" title="Home vs Business IT Support" className="bg-black">
 		  <div className="overflow-x-auto">
 			<table className="w-full border border-gray-300 text-left">
 			  <thead className="bg-gray-100">
@@ -208,6 +179,36 @@ export default function Business() {
 			</table>
 		  </div>
 		</Section>
+
+		<Section id="pricing" title="Business Pricing" className="bg-white">
+		  Transparent, professional pricing designed for local businesses.
+		  <ul>
+			<h2 className="font-bold py-4">
+			  Business Support Rates
+			</h2>
+			<p>
+			  Our standard rate for business IT support is <strong>£75 per hour</strong>,
+			  covering both remote and on-site assistance.
+			  <br /><br />
+			  For businesses that require regular support, we can offer tailored ongoing
+			  support arrangements designed to provide priority assistance and improved
+			  cost predictability.
+			  <br /><br />
+			  Project-based work is quoted individually based on scope, complexity, and
+			  timescales, ensuring clear expectations before work begins.
+			</p>
+		  </ul>
+		</Section>
+
+
+      <Section id="contact" title="Contact BAL-IT" className="bg-black">
+        <p className="mb-4">
+          📧 support@bal-it.co.uk  
+          📞 07XXXXXXXX
+        </p>
+        <ContactForm />
+      </Section>
+  
 
     </>
   );
