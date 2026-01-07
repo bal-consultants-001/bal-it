@@ -14,50 +14,49 @@ export default function ContactForm() {
 
   const MIN_MESSAGE_LENGTH = 30;
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("Verifying...");
+	async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+	  e.preventDefault();
+	  setStatus("Verifying...");
 
-    if (!window.grecaptcha) {
-      setStatus("reCAPTCHA not ready. Please try again.");
-      return;
-    }
+	  if (!(window as any).grecaptcha) {
+		setStatus("reCAPTCHA failed to load.");
+		return;
+	  }
 
-    const token = await window.grecaptcha.execute(
-      process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
-      { action: "submit" }
-    );
+	  const token = await (window as any).grecaptcha.execute(
+		process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+		{ action: "submit" }
+	  );
 
-    setStatus("Sending...");
+	  if (!token) {
+		setStatus("reCAPTCHA verification failed.");
+		return;
+	  }
 
-    const formData = new FormData(e.currentTarget);
-    const message = String(formData.get("message") || "");
+	  setStatus("Sending...");
 
-    if (message.length < MIN_MESSAGE_LENGTH) {
-      setStatus(`Message must be at least ${MIN_MESSAGE_LENGTH} characters.`);
-      return;
-    }
+	  const formData = new FormData(e.currentTarget);
+	  const message = String(formData.get("message") || "");
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: formData.get("name"),
-        email: formData.get("email"),
-        subject: formData.get("subject"),
-        message,
-        recaptchaToken: token,
-      }),
-    });
+	  const res = await fetch("/api/contact", {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify({
+		  name: formData.get("name"),
+		  email: formData.get("email"),
+		  subject: formData.get("subject"),
+		  message,
+		  recaptchaToken: token,
+		}),
+	  });
 
-    if (res.ok) {
-      setStatus("Message sent successfully!");
-      e.currentTarget.reset();
-      setMessageLength(0);
-    } else {
-      setStatus("Verification failed or message blocked.");
-    }
-  }
+	  if (res.ok) {
+		setStatus("Message sent successfully!");
+		e.currentTarget.reset();
+	  } else {
+		setStatus("Failed to send message.");
+	  }
+	}
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
@@ -65,7 +64,7 @@ export default function ContactForm() {
       <input name="email" required type="email" placeholder="Email" className="w-full border p-2" />
 
       <select name="subject" required className="w-full border p-2 text-black" defaultValue="">
-        <option value="" disabled>Select a subject</option>
+        <option className="text-white" value="" disabled>Select a subject</option>
         <option value="General IT Support">General IT Support</option>
         <option value="PC / Laptop Repair">PC / Laptop Repair</option>
         <option value="Virus & Security Issues">Virus & Security Issues</option>
