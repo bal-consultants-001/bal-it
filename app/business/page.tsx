@@ -77,7 +77,28 @@ export default function Business() {
         </ul>
       </Section>
 
-      <Section id="services" title="Business IT Services" className="bg-black">
+	<Section id="support-options" title="Business Support Options" className="bg-black">
+	  <ul className="list-disc pl-6 space-y-3">
+		<li>
+		  <strong>Ad-Hoc IT Support</strong> – Ideal for businesses that need help as
+		  issues arise. You only pay for the time you need, with no ongoing
+		  commitment.
+		</li>
+		<li>
+		  <strong>Ongoing IT Support</strong> – For businesses that want consistent,
+		  reliable assistance. We provide regular support, system oversight, and
+		  proactive advice to help reduce issues before they impact your business.
+		</li>
+		<li>
+		  <strong>Project-Based Work</strong> – Planned IT projects such as upgrades,
+		  migrations, office setups, or security improvements. All project work is
+		  scoped and quoted in advance.
+		</li>
+	  </ul>
+	</Section>
+
+
+      <Section id="services" title="Business IT Services" className="bg-white">
         <ul>
           <h2 className="font-bold py-4">
             Day-to-Day IT Support
@@ -128,30 +149,66 @@ export default function Business() {
         <div className="py-6"></div>
       </Section>
 
-      <Section id="pricing" title="Business Pricing" className="bg-white">
-        Transparent, professional pricing designed for businesses.
-        <ul>
-          <h2 className="font-bold py-4">
-            Business Support Rates
-          </h2>
-          <p>
-            Our standard rate for business IT support is <strong>£75 per hour</strong>,
-            covering both remote and on-site assistance.
-            <br /><br />
-            Project-based work is quoted individually based on scope, complexity,
-            and timescales. This ensures you receive a clear and fair price before
-            work begins.
-          </p>
-        </ul>
-      </Section>
+		<Section id="pricing" title="Business Pricing" className="bg-white">
+		  Transparent, professional pricing designed for local businesses.
+		  <ul>
+			<h2 className="font-bold py-4">
+			  Business Support Rates
+			</h2>
+			<p>
+			  Our standard rate for business IT support is <strong>£75 per hour</strong>,
+			  covering both remote and on-site assistance.
+			  <br /><br />
+			  For businesses that require regular support, we can offer tailored ongoing
+			  support arrangements designed to provide priority assistance and improved
+			  cost predictability.
+			  <br /><br />
+			  Project-based work is quoted individually based on scope, complexity, and
+			  timescales, ensuring clear expectations before work begins.
+			</p>
+		  </ul>
+		</Section>
 
-      <Section id="contact" title="Contact BAL-IT" className="bg-black">
+
+      <Section id="contact" title="Contact BAL-IT" className="bg-white">
         <p className="mb-4">
           📧 support@bal-it.co.uk  
           📞 07XXXXXXXX
         </p>
         <ContactForm />
       </Section>
+	  
+	  <Section id="comparison" title="Home vs Business IT Support" className="bg-white">
+		  <div className="overflow-x-auto">
+			<table className="w-full border border-gray-300 text-left">
+			  <thead className="bg-gray-100">
+				<tr>
+				  <th className="border px-4 py-2">Home Users</th>
+				  <th className="border px-4 py-2">Business Users</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td className="border px-4 py-2">Personal devices & home networks</td>
+				  <td className="border px-4 py-2">Business systems & users</td>
+				</tr>
+				<tr>
+				  <td className="border px-4 py-2">Flexible, ad-hoc support</td>
+				  <td className="border px-4 py-2">Structured, reliability-focused support</td>
+				</tr>
+				<tr>
+				  <td className="border px-4 py-2">£45 per hour</td>
+				  <td className="border px-4 py-2">£75 per hour</td>
+				</tr>
+				<tr>
+				  <td className="border px-4 py-2">General security guidance</td>
+				  <td className="border px-4 py-2">Business-grade security & data protection</td>
+				</tr>
+			  </tbody>
+			</table>
+		  </div>
+		</Section>
+
     </>
   );
 }
