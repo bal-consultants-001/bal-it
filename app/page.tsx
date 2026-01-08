@@ -10,7 +10,7 @@ export default function Home() {
 
 		<div
 		  id="logo"
-		  className="w-full bg-white py-16 flex justify-center items-center"
+		  className="w-full bg-white py-16 flex justify-center items-center scroll-mt-24"
 		>
 		  <Image
 			src="/images/bal-it.png"
@@ -21,6 +21,7 @@ export default function Home() {
 			className="object-contain"
 		  />
 		</div>
+
 
 
 	  <Section
