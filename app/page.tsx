@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Navbar />
 
-		<div id="logo" className="inset-x-0 top-1/2 h-[102%] -translate-y-1/2 -z-10">
+		<div id="logo" className="h-[200]">
 		<Image
               src="/images/bal-it.png"
               alt="BAL-IT"
