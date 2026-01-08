@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 const menuItems = [
-  { name: "Home", to: "intro" },
+  { name: "Home", to: "logo" },
   { name: "About", to: "about" },
   { name: "Why BAL-IT", to: "why-choose-us" },
   { name: "Services", to: "services" },
