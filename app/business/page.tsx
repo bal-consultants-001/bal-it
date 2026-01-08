@@ -24,8 +24,6 @@ export default function Business() {
 		  />
 		</div>
 
-		<div className="pt-[5px] bg-black" />
-
 	  <Section
 	  id="intro"
         title="Reliable IT Support for Local Businesses"
