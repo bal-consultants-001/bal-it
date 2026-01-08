@@ -283,8 +283,8 @@ export default function Business() {
 
       <Section id="contact" title="Contact BAL-IT" className="bg-black">
         <p className="mb-4">
-          📧 support@bal-it.co.uk  
-          📞 07XXXXXXXX
+          📧 information@bal-it.co.uk  
+          📞 07721762696
         </p>
         <ContactForm />
       </Section>
