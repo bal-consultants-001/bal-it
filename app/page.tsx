@@ -8,10 +8,7 @@ export default function Home() {
     <>
       <Navbar />
 
-	  <Section
-	  id="intro"
-        title="Home IT Support Made Simple"
-		className="bg-white">
+		<div id="logo" className="inset-x-0 top-1/2 h-[102%] -translate-y-1/2 -z-10">
 		<Image
               src="/images/bal-it.png"
               alt="BAL-IT"
@@ -19,7 +16,13 @@ export default function Home() {
 			  height="125"
               className="object-cover"
             />
-        <p className="mb-6">
+		</div>
+
+	  <Section
+	  id="intro"
+        title="Home IT Support Made Simple"
+		className="bg-white">
+		<p className="mb-6">
           BAL-IT provides reliable, professional at-home and remote IT support
           for laptops, PCs, tablets, Android phones, and limited Apple devices.
         </p>
