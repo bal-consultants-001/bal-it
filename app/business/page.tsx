@@ -35,7 +35,7 @@ export default function Business() {
           focused on running your business.
         </p>
         <p>
-          We offer responsive on-site and remote support, tailored to the needs
+          Based in the Vale of Glamorgan. We offer responsive on-site and remote support, tailored to the needs
           of modern local businesses.
         </p>
       </Section>

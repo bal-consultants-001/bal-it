@@ -36,7 +36,7 @@ export default function Home() {
           for laptops, PCs, tablets and phones.
         </p>
         <p>
-          In-person visits and secure remote assistance are available to suit
+          Based in the Vale of Glamorgan. In-person visits and secure remote assistance are available to suit
           your needs.
         </p>
       </Section>
