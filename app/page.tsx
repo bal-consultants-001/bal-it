@@ -24,15 +24,16 @@ export default function Home() {
 		  />
 		</div>
 
-		<div className="pt-[5px] bg-black" />
+		{/*<div className="pt-[5px] bg-black" />*/}
 
 	  <Section
 	  id="intro"
         title="Home IT Support Made Simple"
-		className="bg-white">
+		className="bg-white text-center"
+		fullWidth>
 		<p className="mb-6">
           BAL-IT provides reliable, professional at-home and remote IT support
-          for laptops, PCs, tablets, Android phones, and limited Apple devices.
+          for laptops, PCs, tablets and phones.
         </p>
         <p>
           In-person visits and secure remote assistance are available to suit
