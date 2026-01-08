@@ -24,7 +24,7 @@ export default function Home() {
 		  />
 		</div>
 
-
+		<div className="pt-[5px] bg-black" />
 
 	  <Section
 	  id="intro"
