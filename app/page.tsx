@@ -8,15 +8,20 @@ export default function Home() {
     <>
       <Navbar />
 
-		<div id="logo" className="h-[200]">
-		<Image
-              src="/images/bal-it.png"
-              alt="BAL-IT"
-              width="250"
-			  height="125"
-              className="object-cover"
-            />
+		<div
+		  id="logo"
+		  className="w-full bg-white py-16 flex justify-center items-center"
+		>
+		  <Image
+			src="/images/bal-it.png"
+			alt="BAL-IT"
+			width={250}
+			height={125}
+			priority
+			className="object-contain"
+		  />
 		</div>
+
 
 	  <Section
 	  id="intro"
