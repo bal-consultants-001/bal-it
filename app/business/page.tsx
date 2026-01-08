@@ -8,22 +8,28 @@ export default function Business() {
     <>
       <Navbar />
 
-      <Section
-        id="intro"
+		<div className="pt-[80px] bg-white" />
+
+		<div
+		  id="logo"
+		  className="w-full bg-white py-6 flex justify-center items-center scroll-mt-24"
+		>
+		  <Image
+			src="/images/bal-it.png"
+			alt="BAL-IT"
+			width={250}
+			height={125}
+			priority
+			className="object-contain"
+		  />
+		</div>
+
+		<div className="pt-[5px] bg-black" />
+
+	  <Section
+	  id="intro"
         title="Reliable IT Support for Local Businesses"
-        background={
-          <>
-            <Image
-              src="/images/backdrop.jpg"
-              alt="BAL-IT Business IT Support"
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-black/50" />
-          </>
-        }
-      >
+		className="bg-white">
         <p className="mb-6">
           BAL-IT provides professional, dependable IT support for small and
           medium-sized businesses, helping you stay secure, productive, and
@@ -34,6 +40,22 @@ export default function Business() {
           of modern local businesses.
         </p>
       </Section>
+
+		<div
+		  id="image"
+		  className="relative w-full h-[400px]"
+		>
+		  <Image
+			src="/images/backdrop.jpg"
+			alt="BAL-IT IT Support"
+			fill
+			priority
+			className="object-cover"
+		  />
+
+		  {/* Dark overlay */}
+		  <div className="absolute inset-0 bg-black/40" />
+		</div>
 
       <Section id="about" title="Business IT Support You Can Depend On" className="bg-white">
         Technology is critical to the day-to-day operation of your business.
