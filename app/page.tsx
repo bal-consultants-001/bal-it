@@ -9,8 +9,6 @@ export default function Home() {
       <Navbar />
 
       <Section
-        id="intro"
-        title="Home IT Support Made Simple"
         background={
           <>
             <Image
@@ -20,10 +18,14 @@ export default function Home() {
               priority
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 height="300" bg-black/40" />
           </>
         }
       >
+	  </Section>
+	  <section
+	  id="intro"
+        title="Home IT Support Made Simple">
         <p className="mb-6">
           BAL-IT provides reliable, professional at-home and remote IT support
           for laptops, PCs, tablets, Android phones, and limited Apple devices.
@@ -68,6 +70,8 @@ export default function Home() {
 			the people and communities we support. Whether you need help with a one-off
 			issue or ongoing support, BAL-IT is here to help.
 		  </p>
+
+		<div className="py-4" />
 
 		  {/* 👇 Secondary scroll anchor */}
 		  <div
