@@ -138,56 +138,96 @@ export default function Business() {
 	</Section>
 
 
-      <Section id="services" title="Business IT Services" className="bg-white">
-        <ul>
-          <h2 className="font-bold py-4">
-            Day-to-Day IT Support
-          </h2>
-          <p>
-            Reliable support for everyday technical issues affecting your
-            business. This includes user support, troubleshooting hardware and
-            software problems, network issues, and general IT assistance — both
-            remotely and on-site.
-          </p>
-        </ul>
-        <div className="py-6"></div>
+     <Section id="services" title="Business IT Services" className="bg-white">
+		  {/* Service 1 */}
+		  <div className="flex flex-col md:flex-row p-6 rounded-lg mb-6">
+			<div className="md:w-2/3 text-white">
+			  <h2 className="font-bold text-xl mb-2">Day-to-Day IT Support</h2>
+			  <p>
+				Reliable support for everyday technical issues affecting your business,
+				including user support, hardware and software troubleshooting, network
+				issues, and general IT assistance — both remotely and on-site.
+			  </p>
+			</div>
+			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
+			  <Image
+				src="/images/support.jpg"
+				alt="Business IT Support"
+				width={300}
+				height={200}
+				className="object-cover transition-transform hover:scale-105"
+			  />
+			</div>
+		  </div>
 
-        <ul>
-          <h2 className="font-bold py-4">
-            Network & Infrastructure Support
-          </h2>
-          <p>
-            Setup, maintenance, and troubleshooting of business networks,
-            internet connectivity, Wi-Fi, and connected devices to ensure stable
-            and secure operations.
-          </p>
-        </ul>
-        <div className="py-6"></div>
+		  {/* Service 2 */}
+		  <div className="flex flex-col md:flex-row p-6 rounded-lg mb-6">
+			<div className="md:w-2/3 text-white">
+			  <h2 className="font-bold text-xl mb-2">
+				Network & Infrastructure Support
+			  </h2>
+			  <p>
+				Setup, maintenance, and troubleshooting of business networks, internet
+				connectivity, Wi-Fi, and connected devices to ensure stable and secure
+				day-to-day operations.
+			  </p>
+			</div>
+			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
+			  <Image
+				src="/images/network.jpg"
+				alt="Business Network Support"
+				width={300}
+				height={200}
+				className="object-cover transition-transform hover:scale-105"
+			  />
+			</div>
+		  </div>
 
-        <ul>
-          <h2 className="font-bold py-4">
-            Cyber Security & Data Protection
-          </h2>
-          <p>
-            Practical security improvements including antivirus solutions,
-            system hardening, user awareness, and advice to help reduce risk and
-            protect sensitive business data.
-          </p>
-        </ul>
-        <div className="py-6"></div>
+		  {/* Service 3 */}
+		  <div className="flex flex-col md:flex-row p-6 rounded-lg mb-6">
+			<div className="md:w-2/3 text-white">
+			  <h2 className="font-bold text-xl mb-2">
+				Cyber Security & Data Protection
+			  </h2>
+			  <p>
+				Practical security improvements including antivirus solutions, system
+				hardening, user awareness, and clear advice to help reduce risk and
+				protect sensitive business data.
+			  </p>
+			</div>
+			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
+			  <Image
+				src="/images/security.jpg"
+				alt="Cyber Security"
+				width={300}
+				height={200}
+				className="object-cover transition-transform hover:scale-105"
+			  />
+			</div>
+		  </div>
 
-        <ul>
-          <h2 className="font-bold py-4">
-            Project-Based IT Work
-          </h2>
-          <p>
-            Support for larger or planned pieces of work such as new system
-            setups, office moves, upgrades, migrations, or security improvements.
-            All project work is quoted based on scope and requirements.
-          </p>
-        </ul>
-        <div className="py-6"></div>
-      </Section>
+		  {/* Service 4 */}
+		  <div className="flex flex-col md:flex-row p-6 rounded-lg mb-6">
+			<div className="md:w-2/3 text-white">
+			  <h2 className="font-bold text-xl mb-2">Project-Based IT Work</h2>
+			  <p>
+				Support for planned or larger IT projects such as new system setups,
+				office moves, upgrades, migrations, or security improvements. All project
+				work is scoped and quoted based on your requirements.
+			  </p>
+			</div>
+			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
+			  <Image
+				src="/images/project.jpg"
+				alt="IT Projects"
+				width={300}
+				height={200}
+				className="object-cover transition-transform hover:scale-105"
+			  />
+			</div>
+		  </div>
+		</Section>
+
 
 	  <Section id="comparison" title="Home vs Business IT Support" className="bg-black">
 		  <div className="overflow-x-auto">
