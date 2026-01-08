@@ -74,10 +74,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
-      <input name="name" required placeholder="Name" className="w-full border p-2" />
-      <input name="email" required type="email" placeholder="Email" className="w-full border p-2" />
-
-      <select name="subject" required className="w-full border p-2 text-black bg-white" defaultValue="">
+	  <select name="subject" required className="w-full border p-2 text-white bg-black rounded-m" defaultValue="">
         <option className="text-white" value="" disabled>Select a subject</option>
         <option value="General IT Support">General IT Support</option>
         <option value="PC / Laptop Repair">PC / Laptop Repair</option>
@@ -86,12 +83,14 @@ export default function ContactForm() {
         <option value="Remote Support Request">Remote Support Request</option>
         <option value="Other Enquiry">Other Enquiry</option>
       </select>
+      <input name="name" required placeholder="Name" className="w-full border p-2 text-white bg-black rounded-m" />
+      <input name="email" required type="email" placeholder="Email" className="w-full border p-2 text-white bg-black rounded-m" />
 
       <textarea
         name="message"
         required
         placeholder="Message (minimum 30 characters)"
-        className="w-full border p-2"
+        className="w-full border p-2 text-white bg-black rounded-m"
         onChange={(e) => setMessageLength(e.target.value.length)}
       />
 
