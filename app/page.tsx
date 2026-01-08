@@ -26,7 +26,7 @@ export default function Home() {
 		>
 		</Section>
 
-	  <section
+	  <Section
 	  id="intro"
         title="Home IT Support Made Simple">
         <p className="mb-6">
