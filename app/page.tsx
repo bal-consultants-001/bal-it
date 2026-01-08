@@ -10,7 +10,7 @@ export default function Home() {
 
 		<div
 		  id="logo"
-		  className="w-full bg-white py-16 flex justify-center items-center scroll-mt-24"
+		  className="w-full bg-white py-6 flex justify-center items-center scroll-mt-24"
 		>
 		  <Image
 			src="/images/bal-it.png"
