@@ -9,6 +9,8 @@ export default function Home() {
       <Navbar />
 
 		<Section
+		  id="image"
+		  title=""
 		  background={
 			<>
 			  <div className="absolute inset-0 h-[300px]">
