@@ -29,7 +29,8 @@ export default function Business() {
 	  <Section
 	  id="intro"
         title="Reliable IT Support for Local Businesses"
-		className="bg-white">
+		className="bg-white text-center"
+		fullWidth>
         <p className="mb-6">
           BAL-IT provides professional, dependable IT support for small and
           medium-sized businesses, helping you stay secure, productive, and
