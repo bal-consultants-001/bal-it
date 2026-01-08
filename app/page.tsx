@@ -26,7 +26,8 @@ export default function Home() {
 
 	  <Section
 	  id="intro"
-        title="Home IT Support Made Simple">
+        title="Home IT Support Made Simple"
+		className="bg-black">
         <p className="mb-6">
           BAL-IT provides reliable, professional at-home and remote IT support
           for laptops, PCs, tablets, Android phones, and limited Apple devices.

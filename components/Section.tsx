@@ -22,7 +22,7 @@ export default function Section({
     >
       {/* Background layer */}
       {background && (
-        <div className="absolute inset-x-0 top-1/2 h-[110%] -translate-y-1/2 -z-10">
+        <div className="absolute inset-x-0 top-1/2 h-[102%] -translate-y-1/2 -z-10">
           {background}
         </div>
       )}
