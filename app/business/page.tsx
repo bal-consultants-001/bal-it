@@ -45,13 +45,13 @@ export default function Business() {
 		  id="image"
 		  className="relative w-full h-[400px]"
 		>
-		  <Image
-			src="/images/servers.jpg"
-			alt="BAL-IT IT Support"
-			fill
-			priority
-			className="object-cover"
-		  />
+		<Image
+		  src="/images/servers2.jpg"
+		  alt="BAL-IT IT Support"
+		  fill
+		  priority
+		  className="object-cover object-[50%_20%]"
+		/>
 
 		  {/* Dark overlay */}
 		  <div className="absolute inset-0 bg-black/40" />
