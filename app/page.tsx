@@ -8,25 +8,21 @@ export default function Home() {
     <>
       <Navbar />
 
-		<Section
+		<div
 		  id="image"
-		  title=""
-		  background={
-			<>
-			  <div className="absolute inset-0 h-[300px]">
-				<Image
-				  src="/images/backdrop.jpg"
-				  alt="BAL-IT IT Support"
-				  fill
-				  priority
-				  className="object-cover"
-				/>
-				<div className="absolute inset-0 bg-black/40" />
-			  </div>
-			</>
-		  }
+		  className="relative w-full h-[300px]"
 		>
-		</Section>
+		  <Image
+			src="/images/backdrop.jpg"
+			alt="BAL-IT IT Support"
+			fill
+			priority
+			className="object-cover"
+		  />
+
+		  {/* Dark overlay */}
+		  <div className="absolute inset-0 bg-black/40" />
+		</div>
 
 	  <Section
 	  id="intro"
