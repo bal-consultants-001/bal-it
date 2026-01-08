@@ -29,7 +29,7 @@ export default function Navbar() {
 			  height="80"
               className="object-cover"
             />
-		/*<span className="font-bold text-xl text-black">BAL-IT</span>*/
+			{/*<span className="font-bold text-xl text-black">BAL-IT</span>*/}
 
         <div className="flex items-center space-x-6 text-black">
           {/* Scroll navigation (same-page only) */}
