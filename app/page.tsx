@@ -8,9 +8,30 @@ export default function Home() {
     <>
       <Navbar />
 
+	  <Section
+	  id="intro"
+        title="Home IT Support Made Simple"
+		className="bg-white">
+		<Image
+              src="/images/bal-it.png"
+              alt="BAL-IT"
+              width="250"
+			  height="125"
+              className="object-cover"
+            />
+        <p className="mb-6">
+          BAL-IT provides reliable, professional at-home and remote IT support
+          for laptops, PCs, tablets, Android phones, and limited Apple devices.
+        </p>
+        <p>
+          In-person visits and secure remote assistance are available to suit
+          your needs.
+        </p>
+      </Section>
+
 		<div
 		  id="image"
-		  className="relative w-full h-[450px]"
+		  className="relative w-full h-[400px]"
 		>
 		  <Image
 			src="/images/backdrop.jpg"
@@ -23,20 +44,6 @@ export default function Home() {
 		  {/* Dark overlay */}
 		  <div className="absolute inset-0 bg-black/40" />
 		</div>
-
-	  <Section
-	  id="intro"
-        title="Home IT Support Made Simple"
-		className="bg-black">
-        <p className="mb-6">
-          BAL-IT provides reliable, professional at-home and remote IT support
-          for laptops, PCs, tablets, Android phones, and limited Apple devices.
-        </p>
-        <p>
-          In-person visits and secure remote assistance are available to suit
-          your needs.
-        </p>
-      </Section>
 
 		<Section id="about" title="About BAL-IT" className="bg-white">
 		  <p>
@@ -78,7 +85,7 @@ export default function Home() {
 		  {/* 👇 Secondary scroll anchor */}
 		  <div
 			id="why-choose-us"
-			className="mt-12 scroll-mt-0"
+			className="mt-12 scroll-mt-34"
 		  >
 			<h3 className="text-2xl font-semibold mb-6">
 			  Why Choose BAL-IT
