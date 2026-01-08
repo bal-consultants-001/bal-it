@@ -39,7 +39,7 @@ export default function Navbar() {
               to={item.to}
               spy={true}
               smooth={true}
-              offset={-120}
+              offset={-90}
               duration={500}
               activeClass="text-blue-600 font-semibold"
               className="cursor-pointer hover:text-blue-500"
