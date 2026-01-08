@@ -46,7 +46,7 @@ export default function Business() {
 		  className="relative w-full h-[400px]"
 		>
 		  <Image
-			src="/images/backdrop.jpg"
+			src="/images/servers.jpg"
 			alt="BAL-IT IT Support"
 			fill
 			priority
