@@ -78,7 +78,7 @@ export default function Home() {
 		  {/* 👇 Secondary scroll anchor */}
 		  <div
 			id="why-choose-us"
-			className="mt-12 scroll-mt--54"
+			className="mt-12 scroll-mt-0"
 		  >
 			<h3 className="text-2xl font-semibold mb-6">
 			  Why Choose BAL-IT
