@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Navbar />
 
-		<div className="pt-[90px]" />
+		<div className="pt-[80px] bg-white" />
 
 		<div
 		  id="logo"
