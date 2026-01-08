@@ -8,21 +8,24 @@ export default function Home() {
     <>
       <Navbar />
 
-      <Section
-        background={
-          <>
-            <Image
-              src="/images/backdrop.jpg"
-              alt="BAL-IT IT Support"
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 height="300" bg-black/40" />
-          </>
-        }
-      >
-	  </Section>
+		<Section
+		  background={
+			<>
+			  <div className="absolute inset-0 h-[300px]">
+				<Image
+				  src="/images/backdrop.jpg"
+				  alt="BAL-IT IT Support"
+				  fill
+				  priority
+				  className="object-cover"
+				/>
+				<div className="absolute inset-0 bg-black/40" />
+			  </div>
+			</>
+		  }
+		>
+		</Section>
+
 	  <section
 	  id="intro"
         title="Home IT Support Made Simple">
