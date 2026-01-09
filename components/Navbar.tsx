@@ -31,10 +31,6 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
-        {/* Logo */}
-        <span className="font-bold text-xl text-black">
-          BAL-IT
-        </span>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6 text-black">
@@ -53,12 +49,14 @@ export default function Navbar() {
             </ScrollLink>
           ))}
 
-			<Link
-			  href={isBusinessPage ? "/" : "/business"}
-			  className="hidden md:inline-block ml-6 px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition"
-			>
-			  {isBusinessPage ? "Home Users" : "Business Users"}
-			</Link>
+		<div className="hidden md:block">
+		  <Link
+			href={isBusinessPage ? "/" : "/business"}
+			className="ml-6 px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition"
+		  >
+			{isBusinessPage ? "Home Users" : "Business Users"}
+		  </Link>
+		</div>
 
         </div>
 
