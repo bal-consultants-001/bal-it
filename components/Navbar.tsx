@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-6 text-black">
+        <div className="hidden lg:flex items-center space-x-6 text-black">
           {menuItems.map((item) => (
             <ScrollLink
               key={item.to}
@@ -49,7 +49,7 @@ export default function Navbar() {
             </ScrollLink>
           ))}
 
-		<div className="hidden md:block">
+		<div className="hidden lg:block">
 		  <Link
 			href={isBusinessPage ? "/" : "/business"}
 			className="ml-6 px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition"
@@ -63,7 +63,7 @@ export default function Navbar() {
         {/* Mobile Hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-black z-50"
+          className="lg:hidden text-black z-50"
           aria-label="Toggle menu"
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -72,7 +72,7 @@ export default function Navbar() {
 
       {/* 🔲 Mobile Overlay */}
       <div
-        className={`fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setMenuOpen(false)}
