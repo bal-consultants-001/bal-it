@@ -53,12 +53,13 @@ export default function Navbar() {
             </ScrollLink>
           ))}
 
-          <Link
-            href={isBusinessPage ? "/" : "/business"}
-            className="ml-6 px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition"
-          >
-            {isBusinessPage ? "Home Users" : "Business Users"}
-          </Link>
+			<Link
+			  href={isBusinessPage ? "/" : "/business"}
+			  className="hidden md:inline-block ml-6 px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition"
+			>
+			  {isBusinessPage ? "Home Users" : "Business Users"}
+			</Link>
+
         </div>
 
         {/* Mobile Hamburger */}
@@ -105,7 +106,7 @@ export default function Navbar() {
           <Link
             href={isBusinessPage ? "/" : "/business"}
             onClick={() => setMenuOpen(false)}
-            className="mt-4 px-4 py-2 border border-black rounded text-center hover:bg-black hover:text-white transition"
+            className="mt-6 px-4 py-3 border-2 border-black rounded text-center font-semibold hover:bg-black hover:text-white transition"
           >
             {isBusinessPage ? "Home Users" : "Business Users"}
           </Link>
