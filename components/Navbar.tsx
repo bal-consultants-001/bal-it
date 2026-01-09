@@ -32,7 +32,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-white shadow z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
 
-        {/* Desktop Menu */}
+        {/* Desktop Menu (≥1024px) */}
         <div className="hidden lg:flex items-center space-x-6 text-black">
           {menuItems.map((item) => (
             <ScrollLink
@@ -49,18 +49,16 @@ export default function Navbar() {
             </ScrollLink>
           ))}
 
-		<div className="hidden lg:block">
-		  <Link
-			href={isBusinessPage ? "/" : "/business"}
-			className="ml-6 px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition"
-		  >
-			{isBusinessPage ? "Home Users" : "Business Users"}
-		  </Link>
-		</div>
-
+          {/* Desktop-only Business/Home button */}
+          <Link
+            href={isBusinessPage ? "/" : "/business"}
+            className="ml-6 px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition"
+          >
+            {isBusinessPage ? "Home Users" : "Business Users"}
+          </Link>
         </div>
 
-        {/* Mobile Hamburger */}
+        {/* Mobile / Tablet Hamburger (<1024px) */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="lg:hidden text-black z-50"
@@ -70,17 +68,19 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* 🔲 Mobile Overlay */}
+      {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
-          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          menuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setMenuOpen(false)}
       />
 
-      {/* 📱 Mobile Menu Panel */}
+      {/* Mobile / Tablet Menu Panel */}
       <div
-        className={`fixed top-[72px] left-0 w-full bg-white shadow-lg transform transition-transform duration-300 md:hidden ${
+        className={`fixed top-[72px] left-0 w-full bg-white shadow-lg transform transition-transform duration-300 lg:hidden ${
           menuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -101,6 +101,7 @@ export default function Navbar() {
             </ScrollLink>
           ))}
 
+          {/* Mobile / Tablet Business/Home button */}
           <Link
             href={isBusinessPage ? "/" : "/business"}
             onClick={() => setMenuOpen(false)}
