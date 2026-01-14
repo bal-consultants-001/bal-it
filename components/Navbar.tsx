@@ -54,18 +54,18 @@ export default function Navbar() {
           </div>
 
           {/* Right-aligned button */}
-          <Link
-            href={isBusinessPage ? "/" : "/business"}
-            className="ml-auto px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition"
-          >
-            {isBusinessPage ? "Home Users" : "Business Users"}
-          </Link>
+			<Link
+			  href={isBusinessPage ? "/" : "/business"}
+			  className="hidden lg:inline-flex ml-auto px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition"
+			>
+			  {isBusinessPage ? "Home Users" : "Business Users"}
+			</Link>
         </div>
 
         {/* Mobile / Tablet Hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="lg:hidden ml-auto text-black z-50"
+          className="lg:hidden ml-auto text-black z-50 align-center"
           aria-label="Toggle menu"
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -105,12 +105,26 @@ export default function Navbar() {
 
           {/* Mobile button */}
           <Link
-            href={isBusinessPage ? "/" : "/business"}
-            onClick={() => setMenuOpen(false)}
-            className="mt-6 px-4 py-3 border-2 border-black rounded text-center font-semibold hover:bg-black hover:text-white transition"
-          >
-            {isBusinessPage ? "Home Users" : "Business Users"}
-          </Link>
+			  href={isBusinessPage ? "/" : "/business"}
+			  onClick={() => setMenuOpen(false)}
+			  className="
+				mt-6
+				w-4/5
+				px-4
+				py-3
+				border-2
+				border-black
+				rounded
+				text-left
+				font-semibold
+				hover:bg-black
+				hover:text-white
+				transition
+			  "
+			>
+			  {isBusinessPage ? "Home Users" : "Business Users"}
+			</Link>
+
         </div>
       </div>
     </nav>
