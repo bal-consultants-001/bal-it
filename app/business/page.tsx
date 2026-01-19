@@ -205,8 +205,29 @@ export default function Business() {
 			  />
 			</div>
 		  </div>
-
+		  
 		  {/* Service 4 */}
+		  <div className="flex flex-col md:flex-row p-6 rounded-lg mb-6">
+			<div className="md:w-2/3 text-white">
+			  <h2 className="font-bold text-xl mb-2">Cloud Services</h2>
+			  <p>
+				The Cloud can be an integral part of your business, but it isn't always easy to implement or maintain.
+				We can help you tailor your setup to make the best use of available technologies.
+				From simple Cloud subscriptions to IAAS deployments, we are here for you.
+			  </p>
+			</div>
+			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
+			  <Image
+				src="/images/cloud.jpg"
+				alt="IT Projects"
+				width={300}
+				height={200}
+				className="object-cover transition-transform hover:scale-105"
+			  />
+			</div>
+		  </div>
+
+		  {/* Service 5 */}
 		  <div className="flex flex-col md:flex-row p-6 rounded-lg mb-6">
 			<div className="md:w-2/3 text-white">
 			  <h2 className="font-bold text-xl mb-2">Project-Based IT Work</h2>
