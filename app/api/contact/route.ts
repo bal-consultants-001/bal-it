@@ -3,7 +3,8 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const { name, email, subject, message, recaptchaToken } = await req.json();
+    // Destructure the new termsAccepted field
+    const { name, email, subject, message, recaptchaToken, termsAccepted } = await req.json();
 
     if (!name || !email || !subject || !message || !recaptchaToken) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
@@ -42,6 +43,8 @@ export async function POST(req: Request) {
       },
     });
 
+    const termsText = termsAccepted ? "Yes" : "No"; // <-- Add this line
+
     /* ========================
        1) INTERNAL EMAIL
        ======================== */
@@ -57,6 +60,8 @@ Subject: ${subject}
 
 Message:
 ${message}
+
+Terms & Conditions accepted: ${termsText}  <-- Include here
       `,
     });
 
@@ -68,30 +73,29 @@ ${message}
       to: email,
       subject: "We’ve received your message – BAL-IT",
       text: `
-		Hi ${name},
+Hi ${name},
 
-		Thanks for contacting BAL-IT.
+Thanks for contacting BAL-IT.
 
-		We’ve received your message regarding:
-		"${subject}"
+We’ve received your message regarding:
+"${subject}"
 
-		Our team will review your request and get back to you as soon as possible.
-		Typical response time is within 1 business day.
+Terms & Conditions accepted: ${termsText}  <-- Include here
 
-		If your enquiry is urgent, please reply to this email.
+Our team will review your request and get back to you as soon as possible.
+Typical response time is within 1 business day.
 
-		Kind regards,
-		BAL-IT Support
-		https://bal-it.com
+If your enquiry is urgent, please reply to this email.
+
+Kind regards,
+BAL-IT Support
+https://bal-it.com
       `,
     });
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Contact error:", error);
-    return NextResponse.json(
-      { error: "Server error" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }

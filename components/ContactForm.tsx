@@ -11,71 +11,81 @@ declare global {
 export default function ContactForm() {
   const [status, setStatus] = useState("");
   const [messageLength, setMessageLength] = useState(0);
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
   const MIN_MESSAGE_LENGTH = 30;
 
-	async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-	  e.preventDefault();
-	  setStatus("Verifying...");
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("Verifying...");
 
-	  const grecaptcha = (window as any).grecaptcha;
+    const grecaptcha = (window as any).grecaptcha;
 
-	  if (!grecaptcha) {
-		setStatus("reCAPTCHA failed to load.");
-		return;
-	  }
+    if (!grecaptcha) {
+      setStatus("reCAPTCHA failed to load.");
+      return;
+    }
 
-	  try {
-		const token = await new Promise<string>((resolve, reject) => {
-		  grecaptcha.ready(() => {
-			grecaptcha
-			  .execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {
-				action: "submit",
-			  })
-			  .then(resolve)
-			  .catch(reject);
-		  });
-		});
+    try {
+      const token = await new Promise<string>((resolve, reject) => {
+        grecaptcha.ready(() => {
+          grecaptcha
+            .execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {
+              action: "submit",
+            })
+            .then(resolve)
+            .catch(reject);
+        });
+      });
 
-		if (!token) {
-		  setStatus("reCAPTCHA verification failed.");
-		  return;
-		}
+      if (!token) {
+        setStatus("reCAPTCHA verification failed.");
+        return;
+      }
 
-		setStatus("Sending...");
+      setStatus("Sending...");
 
-		const formData = new FormData(e.currentTarget);
-		const message = String(formData.get("message") || "");
+      const formData = new FormData(e.currentTarget);
+      const message = String(formData.get("message") || "");
 
-		const res = await fetch("/api/contact", {
-		  method: "POST",
-		  headers: { "Content-Type": "application/json" },
-		  body: JSON.stringify({
-			name: formData.get("name"),
-			email: formData.get("email"),
-			subject: formData.get("subject"),
-			message,
-			recaptchaToken: token,
-		  }),
-		});
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          subject: formData.get("subject"),
+          message,
+          recaptchaToken: token,
+          termsAccepted, // <-- Include checkbox state
+        }),
+      });
 
-		if (res.ok) {
-		  setStatus("Message sent successfully!");
-		  e.currentTarget.reset();
-		} else {
-		  setStatus("Failed to send message.");
-		}
-	  } catch (err) {
-		console.error("reCAPTCHA error:", err);
-		setStatus("reCAPTCHA verification failed.");
-	  }
-	}
-
+      if (res.ok) {
+        setStatus("Message sent successfully!");
+        e.currentTarget.reset();
+        setMessageLength(0);
+        setTermsAccepted(false);
+      } else {
+        setStatus("Failed to send message.");
+      }
+    } catch (err) {
+      console.error("reCAPTCHA error:", err);
+      setStatus("reCAPTCHA verification failed.");
+    }
+  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
-	  <select name="subject" required className="w-full border p-2 text-white bg-black rounded-m" defaultValue="">
-        <option className="text-white" value="" disabled>Select a subject</option>
+      <select
+        name="subject"
+        required
+        className="w-full border p-2 text-white bg-black rounded"
+        defaultValue=""
+      >
+        <option className="text-white" value="" disabled>
+          Select a subject
+        </option>
         <option value="General IT Support">General IT Support</option>
         <option value="PC / Laptop Repair">PC / Laptop Repair</option>
         <option value="Virus & Security Issues">Virus & Security Issues</option>
@@ -83,14 +93,47 @@ export default function ContactForm() {
         <option value="Remote Support Request">Remote Support Request</option>
         <option value="Other Enquiry">Other Enquiry</option>
       </select>
-      <input name="name" required placeholder="Name" className="w-full border p-2 text-white bg-black rounded-m" />
-      <input name="email" required type="email" placeholder="Email" className="w-full border p-2 text-white bg-black rounded-m" />
 
+      <input
+        name="name"
+        required
+        placeholder="Name"
+        className="w-full border p-2 text-white bg-black rounded"
+      />
+      <input
+        name="email"
+        required
+        type="email"
+        placeholder="Email"
+        className="w-full border p-2 text-white bg-black rounded"
+      />
+	{/* Terms & Conditions Checkbox */}
+      <div className="flex items-center space-x-2">
+        <input
+          type="checkbox"
+          id="terms"
+          checked={termsAccepted}
+          onChange={(e) => setTermsAccepted(e.target.checked)}
+          className="w-4 h-4"
+        />
+        <label htmlFor="terms" className="text-sm text-white">
+          I have read and agree to the{" "}
+          <a
+            href="/documents/terms-of-service"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            Terms and Conditions
+          </a>
+        </label>
+      </div>
+	  
       <textarea
         name="message"
         required
         placeholder="Message (minimum 30 characters)"
-        className="w-full border p-2 text-white bg-black rounded-m"
+        className="w-full border p-2 text-white bg-black rounded"
         onChange={(e) => setMessageLength(e.target.value.length)}
       />
 
@@ -98,9 +141,11 @@ export default function ContactForm() {
         {messageLength}/{MIN_MESSAGE_LENGTH} characters
       </p>
 
+      
+
       <button
         className="bg-blue-600 text-white px-4 py-2 disabled:opacity-50"
-        disabled={messageLength < MIN_MESSAGE_LENGTH}
+        disabled={messageLength < MIN_MESSAGE_LENGTH || !termsAccepted} // Require checkbox
       >
         Send Message
       </button>
