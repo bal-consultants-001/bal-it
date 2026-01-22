@@ -8,8 +8,6 @@ export default function Business() {
     <>
       <Navbar />
 
-		<div className="pt-[80px] bg-white" />
-
 		<div
 		  id="logo"
 		  className="relative w-full h-[260px] md:h-[320px] overflow-hidden scroll-mt-24"
@@ -60,7 +58,7 @@ export default function Business() {
 		  {/* Logo */}
 		  <div className="relative z-10 flex items-center justify-center h-full pt-14">
 			<Image
-			  src="/images/bal-it.png"
+			  src="/images/bal-it-d.png"
 			  alt="BAL-IT"
 			  width={250}
 			  height={125}

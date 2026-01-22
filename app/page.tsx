@@ -14,7 +14,7 @@ export default function Home() {
 		  className="relative w-full h-[260px] md:h-[320px] overflow-hidden scroll-mt-24"
 		>
 		  {/* Background video */}
-		  <video
+			  {/*<video
 			className="
 			  absolute inset-0 w-full h-full object-cover
 			  blur scale-105
@@ -29,10 +29,11 @@ export default function Home() {
 			poster="/images/video-fallback.png"
 		  >
 			<source src="/videos/backdrop_low.mp4" type="video/mp4" />
-		  </video>
+			  </video>*/}
 
 		  {/* Fallback image for reduced motion / video fail */}
-		  <div className="absolute inset-0 motion-safe:hidden">
+			  {/*<div className="absolute inset-0 motion-safe:hidden">*/}
+		  <div className="absolute inset-0">
 			<Image
 			  src="/images/video-fallback.png"
 			  alt=""
@@ -47,9 +48,9 @@ export default function Home() {
 			className="
 			  absolute inset-0
 			  bg-gradient-to-r
-			  from-black/40
+			  from-black/90
 			  via-white/70
-			  to-black/40
+			  to-black/90
 			"
 		  />
 
@@ -59,7 +60,7 @@ export default function Home() {
 		  {/* Logo */}
 		  <div className="relative z-10 flex items-center justify-center h-full pt-14">
 			<Image
-			  src="/images/bal-it.png"
+			  src="/images/bal-it-d.png"
 			  alt="BAL-IT"
 			  width={250}
 			  height={125}
