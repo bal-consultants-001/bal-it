@@ -20,7 +20,7 @@ export default function Section({
   return (
     <section
 	  id={id}
-	  className={`relative py-24 ${
+	  className={`relative py-12 ${
 		fullWidth ? "px-0" : "px-6"
 	  } overflow-hidden ${className}`}
 	>
