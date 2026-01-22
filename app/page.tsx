@@ -47,6 +47,7 @@ export default function Home() {
 		  <div
 			className="
 			  absolute inset-0
+			  scale-105
 			  bg-gradient-to-r
 			  from-black/90
 			  via-white/70
