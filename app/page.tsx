@@ -48,9 +48,9 @@ export default function Home() {
 			className="
 			  absolute inset-0
 			  bg-gradient-to-r
-			  from-black/90
+			  from-black/60
 			  via-white/70
-			  to-black/90
+			  to-black/60
 			"
 		  />
 
