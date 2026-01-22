@@ -38,7 +38,7 @@ export default function Home() {
 			  src="/images/video-fallback.png"
 			  alt=""
 			  fill
-			  className="object-cover scale-175"
+			  className="object-cover scale-275"
 			  priority
 			/>
 		  </div>
