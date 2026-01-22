@@ -12,16 +12,62 @@ export default function Business() {
 
 		<div
 		  id="logo"
-		  className="w-full bg-white py-6 flex justify-center items-center scroll-mt-24"
+		  className="relative w-full h-[260px] md:h-[320px] overflow-hidden scroll-mt-24"
 		>
-		  <Image
-			src="/images/bal-it.png"
-			alt="BAL-IT"
-			width={250}
-			height={125}
-			priority
-			className="object-contain"
+		  {/* Background video */}
+		  <video
+			className="
+			  absolute inset-0 w-full h-full object-cover
+			  blur scale-105
+			  opacity-0 animate-fadeIn
+			  motion-reduce:hidden
+			"
+			autoPlay
+			muted
+			loop
+			playsInline
+			preload="metadata"
+			poster="/images/video-fallback.png"
+		  >
+			<source src="/videos/backdrop_low1.mp4" type="video/mp4" />
+		  </video>
+
+		  {/* Fallback image for reduced motion / video fail */}
+		  <div className="absolute inset-0 motion-safe:hidden">
+			<Image
+			  src="/images/video-fallback.png"
+			  alt=""
+			  fill
+			  className="object-cover"
+			  priority
+			/>
+		  </div>
+
+		  {/* Gradient overlay */}
+		  <div
+			className="
+			  absolute inset-0
+			  bg-gradient-to-r
+			  from-black/40
+			  via-white/70
+			  to-black/40
+			"
 		  />
+
+		  {/* Soft vignette for depth */}
+		  <div className="absolute inset-0 shadow-[inset_0_0_120px_rgba(0,0,0,0.45)]" />
+
+		  {/* Logo */}
+		  <div className="relative z-10 flex items-center justify-center h-full pt-14">
+			<Image
+			  src="/images/bal-it.png"
+			  alt="BAL-IT"
+			  width={250}
+			  height={125}
+			  priority
+			  className="object-contain drop-shadow-lg"
+			/>
+		  </div>
 		</div>
 
 	  <Section
