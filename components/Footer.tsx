@@ -41,7 +41,7 @@ export default function Footer() {
         {/* Right: Logo */}
         <div className="flex-shrink-0 flex items-center">
           <Image
-            src="/images/bal-it.png" // your logo path
+            src="/images/bal-it-d.png" // your logo path
             alt="BAL-IT Logo"
             width={180}
             height={80}
