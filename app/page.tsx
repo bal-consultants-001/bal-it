@@ -106,9 +106,9 @@ export default function Home() {
 		</div>
 
 		<Section id="about" title="About BAL-IT" className="bg-white">
-		  <div className="flex flex-col md:flex-row  p-3 rounded-lg mb-3">
+		  <div className="flex flex-col md:flex-row  p-3 rounded-lg mb-0">
 		  <div className="md:w-1/5 mb-4 md:mb-0 flex justify-center md:justify-center">
-		    <img src="/images/ben1.jpg" alt="BAL-IT" width={130} height={160} className="rounded-lg object-cover" />
+		    <img src="/images/ben2.jpg" alt="BAL-IT" width={100} height={160} className="rounded-lg object-cover" />
 		</div>
 		    <div className="md:w-4/5 text-white">
 		      <p> Hi, I’m the person behind BAL-IT 👋 I provide friendly, local IT support with a simple goal:
