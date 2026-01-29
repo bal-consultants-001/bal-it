@@ -84,7 +84,7 @@ export default function Home() {
           for laptops, PCs, tablets and phones.
         </p>
         <p>
-          Based in the Vale of Glamorgan. In-person visits and secure remote assistance are available to suit
+          While we are based in South Wales for In-person visits, our secure remote assistance is available to suit all needs.
           your needs.
         </p>
       </Section>
@@ -106,38 +106,48 @@ export default function Home() {
 		</div>
 
 		<Section id="about" title="About BAL-IT" className="bg-white">
-		  <p>
-			BAL-IT provides friendly, local IT support with a strong focus on helping
-			people use their technology safely, confidently, and without frustration.
-			We understand that devices play an important role in everyday life, and our
-			priority is to support and protect our clients as they interact with their
-			technology on a daily basis.
+		  <div className="flex flex-col md:flex-row  p-3 rounded-lg mb-3">
+		  <div className="md:w-1/5 mb-4 md:mb-0 flex justify-center md:justify-center">
+		    <img src="/images/ben1.jpg" alt="BAL-IT" width={130} height={160} className="rounded-lg object-cover" />
+		</div>
+		    <div className="md:w-4/5 text-white">
+		      <p> Hi, I’m the person behind BAL-IT 👋 I provide friendly, local IT support with a simple goal:
+			    to help you use your technology safely, confidently, and without frustration. I know how important
+			    phones, laptops, and home tech are in everyday life, and I’m here to make things work the way they
+			    should — without the stress.
+		      </p>
+		    </div>
+		  </div>
+		  
+		  <br />
+		  
+		  <p> I have over 10 years of professional experience working with Microsoft and cloud technologies,
+			along with more than 20 years of hands-on personal IT knowledge covering Windows, Apple Devices, Smart phones and tablets and Linux devices. 
+			I’m a Microsoft Certified professional and SC Cleared, and I’ve worked on everything from home computers
+			to complex business systems. What that means for you is experienced, professional support you can trust
+			— brought into a home and personal setting.
+		  </p>
+		  
+		  <br />
+		  
+		  <p> I specialise in solving problems clearly and calmly, without confusing jargon. Whether your device
+			is running slowly, something isn’t working, or you just need advice, I’ll explain what’s going on in
+			plain English and make sure you feel comfortable every step of the way. I’m always respectful of your
+			home, your time, and your privacy.
 		  </p>
 
 		  <br />
-
-		  <p>
-			With over 10 years of industry experience and more than 20 years of personal
-			IT knowledge, our team brings professional-grade problem solving into the home
-			support environment. This blend of real-world experience puts us in a strong
-			position to assist with a wide range of technology issues while maintaining a
-			consistently high standard of service.
+		  
+		  <p> Because I’m local and work independently, you’ll always deal directly with me — the person doing
+			the work. No call centres, no ticket numbers, just straightforward, reliable support when you need it.
+			Whether it’s a one-off issue or ongoing help, I’m here to make technology easier for you.
 		  </p>
-
+		  
 		  <br />
-
-		  <p>
-			We take pride in explaining solutions clearly and without unnecessary jargon,
-			ensuring our clients always understand what has been done and why. Our team
-			is professional, patient, and respectful of your home, time, and privacy.
-		  </p>
-
-		  <br />
-
-		  <p>
-			As a locally based service, we focus on building long-term relationships with
-			the people and communities we support. Whether you need help with a one-off
-			issue or ongoing support, BAL-IT is here to help.
+		  
+		  <p> I am also able to offer my services outside of a standard 9-5 work day. Whether you need help during 
+		  this time or in the evening or weekends we can work with you to arrange a time that works. The aim is to
+		  respond to all enquiries in a timely manner so you aren't waiting for help when you need it most.
 		  </p>
 
 		<div className="py-4" />
@@ -182,7 +192,7 @@ export default function Home() {
 			  <p>
 				Technology should make life easier, not harder. We provide clear,
 				patient, one-to-one IT support for your home — in person or remotely —
-				without confusing jargon.
+				without confusing jargon. Most issues can be resolved remotely using our secure connection tool.
 			  </p>
 			</div>
 			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
@@ -333,7 +343,7 @@ export default function Home() {
 		  <p>
 			We offer a free 15 minute remote consultation where we discuss your needs and whether we are likely to be able to help.
 			Our standard pricing is £45/hour for remote and in person calls after that.
-			For in person visits, ff you are more than 30 minutes from our facility in Llantwit Major we will charge a minimum £15 (20 minutes) transport cost, this will be included in the first hour of support.
+			For in person visits, if you are more than 30 minutes from our facility in Llantwit Major we will charge an initial £15 (20 minutes) to cover transport cost, this will not be included in the first hour of support.
 		  </p>
 		</ul>
 		<div className="py-6"></div>
