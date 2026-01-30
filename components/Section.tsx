@@ -21,7 +21,7 @@ export default function Section({
     <section
 	  id={id}
 	  className={`relative py-12 ${
-		fullWidth ? "px-0" : "px-6"
+		fullWidth ? "px-0" : "px-4 sm:px-6 lg:px-8"
 	  } overflow-hidden ${className}`}
 	>
       {background && (
@@ -30,9 +30,9 @@ export default function Section({
         </div>
       )}
 
-      <div className={fullWidth ? "w-full" : "max-w-4xl mx-auto"}>
+      <div className={fullWidth ? "w-full" : "w-full max-w-4xl mx-auto"}>
         <div
-          className={`bg-black/70 text-white p-8 shadow-lg ${
+          className={`bg-black/70 text-white p-5 sm:p-8 shadow-lg ${
             fullWidth ? "rounded-none" : "rounded-xl"
           }`}
         >
