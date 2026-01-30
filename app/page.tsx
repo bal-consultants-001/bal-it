@@ -195,8 +195,8 @@ export default function Home() {
 	  >
 
 		{/* Service 1 */}
-		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
-		  <div className="text-white md:w-2/3">
+		<div className="min-w-[95%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Friendly Home IT Support</h2>
 			<p>
 			  Technology should make life easier, not harder. We provide clear,
