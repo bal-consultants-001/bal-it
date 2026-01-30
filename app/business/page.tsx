@@ -193,8 +193,8 @@ export default function Business() {
 	  >
 
 		{/* Service 1 */}
-		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
-		  <div className="text-white md:w-2/3">
+		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Day-to-Day IT Support</h2>
 			<p>
 			  Reliable support for everyday technical issues affecting your business,
@@ -208,8 +208,8 @@ export default function Business() {
 		</div>
 
 		{/* Service 2 */}
-		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
-		  <div className="text-white md:w-2/3">
+		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Network & Infrastructure Support</h2>
 			<p>
 			  Setup, maintenance, and troubleshooting of business networks, internet
@@ -223,8 +223,8 @@ export default function Business() {
 		</div>
 
 		{/* Service 3 */}
-		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
-		  <div className="text-white md:w-2/3">
+		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Cyber Security & Data Protection</h2>
 			<p>
 			  Practical security improvements including antivirus solutions, system
@@ -238,8 +238,8 @@ export default function Business() {
 		</div>
 
 		{/* Service 4 */}
-		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
-		  <div className="text-white md:w-2/3">
+		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Cloud Services</h2>
 			<p>
 			  The Cloud can be an integral part of your business, but it isn't always easy to implement or maintain.
@@ -253,8 +253,8 @@ export default function Business() {
 		</div>
 
 		{/* Service 5 */}
-		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
-		  <div className="text-white md:w-2/3">
+		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Project-Based IT Work</h2>
 			<p>
 			  Support for planned or larger IT projects such as new system setups,
