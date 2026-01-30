@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Section from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
+import ServicesCarousel from "@/components/ServicesCarousel";
 import Image from "next/image";
 
 
@@ -185,6 +186,7 @@ export default function Home() {
 
 
     <Section id="services" title="Services" className="bg-black">
+	  <ServicesCarousel>
 	  <div
 		className="
 		  flex gap-6 overflow-x-auto pb-4
@@ -292,6 +294,7 @@ export default function Home() {
 		</div>
 
 	  </div>
+	  </ServicesCarousel>
 	</Section>
 
 
