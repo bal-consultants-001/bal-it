@@ -58,7 +58,7 @@ export default function Navbar() {
 			  href={isBusinessPage ? "/" : "/business"}
 			  className="hidden lg:inline-flex ml-auto px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition"
 			>
-			  {isBusinessPage ? "Home Users" : "Business Users"}
+			  {isBusinessPage ? "Click for Home Users" : "Click for Business Users"}
 			</Link>
         </div>
 

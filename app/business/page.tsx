@@ -183,115 +183,93 @@ export default function Business() {
 
 
      <Section id="services" title="Business IT Services" className="bg-white">
-		  {/* Service 1 */}
-		  <div className="flex flex-col md:flex-row p-6 rounded-lg mb-6">
-			<div className="md:w-2/3 text-white">
-			  <h2 className="font-bold text-xl mb-2">Day-to-Day IT Support</h2>
-			  <p>
-				Reliable support for everyday technical issues affecting your business,
-				including user support, hardware and software troubleshooting, network
-				issues, and general IT assistance — both remotely and on-site.
-			  </p>
-			</div>
-			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
-			  <Image
-				src="/images/support.jpg"
-				alt="Business IT Support"
-				width={300}
-				height={200}
-				className="object-cover transition-transform hover:scale-105"
-			  />
-			</div>
-		  </div>
+	  <div
+		className="
+		  flex gap-6 overflow-x-auto pb-4
+		  snap-x snap-mandatory
+		  md:block md:overflow-visible
+		  [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
+		"
+	  >
 
-		  {/* Service 2 */}
-		  <div className="flex flex-col md:flex-row p-6 rounded-lg mb-6">
-			<div className="md:w-2/3 text-white">
-			  <h2 className="font-bold text-xl mb-2">
-				Network & Infrastructure Support
-			  </h2>
-			  <p>
-				Setup, maintenance, and troubleshooting of business networks, internet
-				connectivity, Wi-Fi, and connected devices to ensure stable and secure
-				day-to-day operations.
-			  </p>
-			</div>
-			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
-			  <Image
-				src="/images/network.jpg"
-				alt="Business Network Support"
-				width={300}
-				height={200}
-				className="object-cover transition-transform hover:scale-105"
-			  />
-			</div>
+		{/* Service 1 */}
+		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-2/3">
+			<h2 className="font-bold text-xl mb-2">Day-to-Day IT Support</h2>
+			<p>
+			  Reliable support for everyday technical issues affecting your business,
+			  including user support, hardware and software troubleshooting, network
+			  issues, and general IT assistance — both remotely and on-site.
+			</p>
 		  </div>
+		  <div className="w-full mt-4 md:w-1/3 md:mt-0 md:ml-6 rounded-lg overflow-hidden">
+			<Image src="/images/support.jpg" alt="Business IT Support" width={300} height={200} className="object-cover w-full h-full transition-transform hover:scale-105" />
+		  </div>
+		</div>
 
-		  {/* Service 3 */}
-		  <div className="flex flex-col md:flex-row p-6 rounded-lg mb-6">
-			<div className="md:w-2/3 text-white">
-			  <h2 className="font-bold text-xl mb-2">
-				Cyber Security & Data Protection
-			  </h2>
-			  <p>
-				Practical security improvements including antivirus solutions, system
-				hardening, user awareness, and clear advice to help reduce risk and
-				protect sensitive business data.
-			  </p>
-			</div>
-			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
-			  <Image
-				src="/images/security.jpg"
-				alt="Cyber Security"
-				width={300}
-				height={200}
-				className="object-cover transition-transform hover:scale-105"
-			  />
-			</div>
+		{/* Service 2 */}
+		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-2/3">
+			<h2 className="font-bold text-xl mb-2">Network & Infrastructure Support</h2>
+			<p>
+			  Setup, maintenance, and troubleshooting of business networks, internet
+			  connectivity, Wi-Fi, and connected devices to ensure stable and secure
+			  day-to-day operations.
+			</p>
 		  </div>
-		  
-		  {/* Service 4 */}
-		  <div className="flex flex-col md:flex-row p-6 rounded-lg mb-6">
-			<div className="md:w-2/3 text-white">
-			  <h2 className="font-bold text-xl mb-2">Cloud Services</h2>
-			  <p>
-				The Cloud can be an integral part of your business, but it isn't always easy to implement or maintain.
-				We can help you tailor your setup to make the best use of available technologies.
-				From simple Cloud subscriptions to IAAS deployments, we are here for you.
-			  </p>
-			</div>
-			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
-			  <Image
-				src="/images/cloud.jpg"
-				alt="IT Projects"
-				width={300}
-				height={200}
-				className="object-cover transition-transform hover:scale-105"
-			  />
-			</div>
+		  <div className="w-full mt-4 md:w-1/3 md:mt-0 md:ml-6 rounded-lg overflow-hidden">
+			<Image src="/images/network.jpg" alt="Business Network Support" width={300} height={200} className="object-cover w-full h-full transition-transform hover:scale-105" />
 		  </div>
+		</div>
 
-		  {/* Service 5 */}
-		  <div className="flex flex-col md:flex-row p-6 rounded-lg mb-6">
-			<div className="md:w-2/3 text-white">
-			  <h2 className="font-bold text-xl mb-2">Project-Based IT Work</h2>
-			  <p>
-				Support for planned or larger IT projects such as new system setups,
-				office moves, upgrades, migrations, or security improvements. All project
-				work is scoped and quoted based on your requirements.
-			  </p>
-			</div>
-			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
-			  <Image
-				src="/images/project.jpg"
-				alt="IT Projects"
-				width={300}
-				height={200}
-				className="object-cover transition-transform hover:scale-105"
-			  />
-			</div>
+		{/* Service 3 */}
+		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-2/3">
+			<h2 className="font-bold text-xl mb-2">Cyber Security & Data Protection</h2>
+			<p>
+			  Practical security improvements including antivirus solutions, system
+			  hardening, user awareness, and clear advice to help reduce risk and
+			  protect sensitive business data.
+			</p>
 		  </div>
-		</Section>
+		  <div className="w-full mt-4 md:w-1/3 md:mt-0 md:ml-6 rounded-lg overflow-hidden">
+			<Image src="/images/security.jpg" alt="Cyber Security" width={300} height={200} className="object-cover w-full h-full transition-transform hover:scale-105" />
+		  </div>
+		</div>
+
+		{/* Service 4 */}
+		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-2/3">
+			<h2 className="font-bold text-xl mb-2">Cloud Services</h2>
+			<p>
+			  The Cloud can be an integral part of your business, but it isn't always easy to implement or maintain.
+			  We can help you tailor your setup to make the best use of available technologies.
+			  From simple Cloud subscriptions to IAAS deployments, we are here for you.
+			</p>
+		  </div>
+		  <div className="w-full mt-4 md:w-1/3 md:mt-0 md:ml-6 rounded-lg overflow-hidden">
+			<Image src="/images/cloud.jpg" alt="Cloud Services" width={300} height={200} className="object-cover w-full h-full transition-transform hover:scale-105" />
+		  </div>
+		</div>
+
+		{/* Service 5 */}
+		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-2/3">
+			<h2 className="font-bold text-xl mb-2">Project-Based IT Work</h2>
+			<p>
+			  Support for planned or larger IT projects such as new system setups,
+			  office moves, upgrades, migrations, or security improvements. All project
+			  work is scoped and quoted based on your requirements.
+			</p>
+		  </div>
+		  <div className="w-full mt-4 md:w-1/3 md:mt-0 md:ml-6 rounded-lg overflow-hidden">
+			<Image src="/images/project.jpg" alt="IT Projects" width={300} height={200} className="object-cover w-full h-full transition-transform hover:scale-105" />
+		  </div>
+		</div>
+
+	  </div>
+	</Section>
+
 
 
 	  <Section id="comparison" title="Home vs Business IT Support" className="bg-black">
