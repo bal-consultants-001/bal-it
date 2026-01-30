@@ -122,7 +122,7 @@ export default function Navbar() {
 				transition
 			  "
 			>
-			  {isBusinessPage ? "Home Users" : "Business Users"}
+			  {isBusinessPage ? "Click for Home Users" : "Click for Business Users"}
 			</Link>
 
         </div>
