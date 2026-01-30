@@ -185,150 +185,115 @@ export default function Home() {
 
 
     <Section id="services" title="Services" className="bg-black">
-		  {/* Service 1 */}
-		  <div className="flex flex-col md:flex-row  p-6 rounded-lg mb-6">
-			<div className="md:w-2/3 text-white">
-			  <h2 className="font-bold text-xl mb-2">Friendly Home IT Support</h2>
-			  <p>
-				Technology should make life easier, not harder. We provide clear,
-				patient, one-to-one IT support for your home — in person or remotely —
-				without confusing jargon. Most issues can be resolved remotely using our secure connection tool.
-			  </p>
-			</div>
-			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
-			  <Image
-				src="/images/friendly.jpg" // <-- add image path here
-				alt="Home IT Support"
-				width={300}
-				height={200}
-				className="object-cover transition-transform hover:scale-105"
-			  />
-			</div>
-		  </div>
+	  <div
+		className="
+		  flex gap-6 overflow-x-auto pb-4
+		  snap-x snap-mandatory
+		  md:block md:overflow-visible
+		  [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
+		"
+	  >
 
-		  {/* Service 2 */}
-		  <div className="flex flex-col md:flex-row  p-6 rounded-lg mb-6">
-			<div className="md:w-2/3 text-white">
-			  <h2 className="font-bold text-xl mb-2">Home Wi-Fi & Internet Issues</h2>
-			  <p>
-				We fix slow or unreliable internet, improve Wi-Fi coverage, and set up
-				home networks so all your devices work smoothly for streaming, work, and
-				everyday use.
-			  </p>
-			</div>
-			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
-			  <Image
-				src="/images/wifi.jpg" // <-- add image path here
-				alt="Wi-Fi Setup"
-				width={300}
-				height={200}
-				className="object-cover transition-transform hover:scale-105"
-			  />
-			</div>
+		{/* Service 1 */}
+		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-2/3">
+			<h2 className="font-bold text-xl mb-2">Friendly Home IT Support</h2>
+			<p>
+			  Technology should make life easier, not harder. We provide clear,
+			  patient, one-to-one IT support for your home — in person or remotely —
+			  without confusing jargon. Most issues can be resolved remotely using our secure connection tool.
+			</p>
 		  </div>
+		  <div className="w-full mt-4 md:w-1/3 md:mt-0 md:ml-6 rounded-lg overflow-hidden">
+			<Image src="/images/friendly.jpg" alt="Home IT Support" width={300} height={200} className="object-cover w-full h-full transition-transform hover:scale-105" />
+		  </div>
+		</div>
 
-		  {/* Service 3 */}
-		  <div className="flex flex-col md:flex-row  p-6 rounded-lg mb-6">
-			<div className="md:w-2/3 text-white">
-			  <h2 className="font-bold text-xl mb-2">Device Setup & Tech Support</h2>
-			  <p>
-				From new devices to everyday problems, we support laptops, desktops,
-				tablets, phones, printers, and smart home technology — with clear
-				explanations included.
-			  </p>
-			</div>
-			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
-			  <Image
-				src="/images/professional.jpg" // <-- add image path here
-				alt="Device Setup"
-				width={300}
-				height={200}
-				className="object-cover transition-transform hover:scale-105"
-			  />
-			</div>
+		{/* Service 2 */}
+		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-2/3">
+			<h2 className="font-bold text-xl mb-2">Home Wi-Fi & Internet Issues</h2>
+			<p>
+			  We fix slow or unreliable internet, improve Wi-Fi coverage, and set up
+			  home networks so all your devices work smoothly for streaming, work, and everyday use.
+			</p>
 		  </div>
+		  <div className="w-full mt-4 md:w-1/3 md:mt-0 md:ml-6 rounded-lg overflow-hidden">
+			<Image src="/images/wifi.jpg" alt="Wi-Fi Setup" width={300} height={200} className="object-cover w-full h-full transition-transform hover:scale-105" />
+		  </div>
+		</div>
 
-		  {/* Service 4 */}
-		  <div className="flex flex-col md:flex-row  p-6 rounded-lg mb-6">
-			<div className="md:w-2/3 text-white">
-			  <h2 className="font-bold text-xl mb-2">Personal Tech Help & Tuition</h2>
-			  <p>
-				One-to-one guidance tailored to you. We help you build confidence using
-				your technology at a comfortable pace, whether you’re learning the
-				basics or new features.
-			  </p>
-			</div>
-			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
-			  <Image
-				src="/images/learn.jpg" // <-- add image path here
-				alt="Tech Tuition"
-				width={300}
-				height={200}
-				className="object-cover transition-transform hover:scale-105"
-			  />
-			</div>
+		{/* Service 3 */}
+		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-2/3">
+			<h2 className="font-bold text-xl mb-2">Device Setup & Tech Support</h2>
+			<p>
+			  From new devices to everyday problems, we support laptops, desktops,
+			  tablets, phones, printers, and smart home technology — with clear explanations included.
+			</p>
 		  </div>
+		  <div className="w-full mt-4 md:w-1/3 md:mt-0 md:ml-6 rounded-lg overflow-hidden">
+			<Image src="/images/professional.jpg" alt="Device Setup" width={300} height={200} className="object-cover w-full h-full transition-transform hover:scale-105" />
+		  </div>
+		</div>
 
-		  {/* Service 5 */}
-		  <div className="flex flex-col md:flex-row  p-6 rounded-lg mb-6">
-			<div className="md:w-2/3 text-white">
-			  <h2 className="font-bold text-xl mb-2">Virus Removal & Security</h2>
-			  <p>
-				We remove viruses and malware and improve your device security to help
-				keep your systems running safely and reliably.
-			  </p>
-			</div>
-			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
-			  <Image
-				src="/images/virus.jpg" // <-- add image path here
-				alt="Virus Removal"
-				width={300}
-				height={200}
-				className="object-cover transition-transform hover:scale-105"
-			  />
-			</div>
+		{/* Service 4 */}
+		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-2/3">
+			<h2 className="font-bold text-xl mb-2">Personal Tech Help & Tuition</h2>
+			<p>
+			  One-to-one guidance tailored to you. We help you build confidence using
+			  your technology at a comfortable pace, whether you’re learning the basics or new features.
+			</p>
 		  </div>
+		  <div className="w-full mt-4 md:w-1/3 md:mt-0 md:ml-6 rounded-lg overflow-hidden">
+			<Image src="/images/learn.jpg" alt="Tech Tuition" width={300} height={200} className="object-cover w-full h-full transition-transform hover:scale-105" />
+		  </div>
+		</div>
 
-		  {/* Service 6 */}
-		  <div className="flex flex-col md:flex-row  p-6 rounded-lg mb-6">
-			<div className="md:w-2/3 text-white">
-			  <h2 className="font-bold text-xl mb-2">Online Safety Advice</h2>
-			  <p>
-				Practical advice to help protect your devices and personal information,
-				avoid scams, and stay safe online with simple, effective steps.
-			  </p>
-			</div>
-			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
-			  <Image
-				src="/images/safety.jpg" // <-- add image path here
-				alt="Online Safety"
-				width={300}
-				height={200}
-				className="object-cover transition-transform hover:scale-105"
-			  />
-			</div>
+		{/* Service 5 */}
+		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-2/3">
+			<h2 className="font-bold text-xl mb-2">Virus Removal & Security</h2>
+			<p>
+			  We remove viruses and malware and improve your device security to help keep your systems running safely and reliably.
+			</p>
 		  </div>
+		  <div className="w-full mt-4 md:w-1/3 md:mt-0 md:ml-6 rounded-lg overflow-hidden">
+			<Image src="/images/virus.jpg" alt="Virus Removal" width={300} height={200} className="object-cover w-full h-full transition-transform hover:scale-105" />
+		  </div>
+		</div>
 
-		  {/* Service 7 */}
-		  <div className="flex flex-col md:flex-row  p-6 rounded-lg mb-6">
-			<div className="md:w-2/3 text-white">
-			  <h2 className="font-bold text-xl mb-2">Other Home Technology Support</h2>
-			  <p>
-				If it plugs in or connects to the internet, we can usually help — from
-				software issues and backups to general troubleshooting.
-			  </p>
-			</div>
-			<div className="md:w-1/3 mb-4 md:mb-0 md:ml-6 rounded-lg overflow-hidden shadow-lg">
-			  <Image
-				src="/images/question.jpg" // <-- add image path here
-				alt="Other Tech Support"
-				width={300}
-				height={200}
-				className="object-cover transition-transform hover:scale-105"
-			  />
-			</div>
+		{/* Service 6 */}
+		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-2/3">
+			<h2 className="font-bold text-xl mb-2">Online Safety Advice</h2>
+			<p>
+			  Practical advice to help protect your devices and personal information,
+			  avoid scams, and stay safe online with simple, effective steps.
+			</p>
 		  </div>
-		</Section>
+		  <div className="w-full mt-4 md:w-1/3 md:mt-0 md:ml-6 rounded-lg overflow-hidden">
+			<Image src="/images/safety.jpg" alt="Online Safety" width={300} height={200} className="object-cover w-full h-full transition-transform hover:scale-105" />
+		  </div>
+		</div>
+
+		{/* Service 7 */}
+		<div className="min-w-[85%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		  <div className="text-white md:w-2/3">
+			<h2 className="font-bold text-xl mb-2">Other Home Technology Support</h2>
+			<p>
+			  If it plugs in or connects to the internet, we can usually help — from software issues and backups to general troubleshooting.
+			</p>
+		  </div>
+		  <div className="w-full mt-4 md:w-1/3 md:mt-0 md:ml-6 rounded-lg overflow-hidden">
+			<Image src="/images/question.jpg" alt="Other Tech Support" width={300} height={200} className="object-cover w-full h-full transition-transform hover:scale-105" />
+		  </div>
+		</div>
+
+	  </div>
+	</Section>
+
 
 
 
