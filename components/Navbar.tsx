@@ -113,6 +113,7 @@ export default function Navbar() {
 				px-4
 				py-3
 				bg-blue-900
+				text-white/300
 				border-2
 				border-black
 				rounded
