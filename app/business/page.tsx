@@ -87,7 +87,7 @@ export default function Business() {
 
 		<div
 		  id="image"
-className="relative w-full aspect-[16/9] md:aspect-[21/9]"
+		  className="relative w-full aspect-[24/5] md:aspect-[24/5]"
 		>
 		<Image
 		  src="/images/servers2.jpg"
