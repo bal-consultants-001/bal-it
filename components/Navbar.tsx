@@ -56,9 +56,9 @@ export default function Navbar() {
           {/* Right-aligned button */}
 			<Link
 			  href={isBusinessPage ? "/" : "/business"}
-			  className="hidden lg:inline-flex ml-auto px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition"
+			  className="hidden lg:inline-flex ml-auto px-3 py-1 border border-black rounded bg-blue-300 hover:bg-black hover:text-white transition"
 			>
-			  {isBusinessPage ? "Click for Home Users" : "Click for Business Users"}
+			  {isBusinessPage ? "Home Users Click Here" : "Business Users Click Here"}
 			</Link>
         </div>
 
@@ -112,6 +112,7 @@ export default function Navbar() {
 				w-4/5
 				px-4
 				py-3
+				bg-blue-300
 				border-2
 				border-black
 				rounded
@@ -122,7 +123,7 @@ export default function Navbar() {
 				transition
 			  "
 			>
-			  {isBusinessPage ? "Click for Home Users" : "Click for Business Users"}
+			  {isBusinessPage ? "Home Users Click Here" : "Business Users Click Here"}
 			</Link>
 
         </div>
