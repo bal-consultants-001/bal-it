@@ -295,7 +295,7 @@ export default function Business() {
 				</tr>
 				<tr>
 				  <td className="border px-4 py-2">£45 per hour</td>
-				  <td className="border px-4 py-2">£75 per hour</td>
+				  <td className="border px-4 py-2">Tailored quote</td>
 				</tr>
 				<tr>
 				  <td className="border px-4 py-2">General security guidance</td>
@@ -313,8 +313,8 @@ export default function Business() {
 			  Business Support Rates
 			</h2>
 			<p>
-			  Our standard rate for business IT support is <strong>£75 per hour</strong>,
-			  covering both remote and on-site assistance.
+			  Our rates for business IT support is client focused,
+			  allowing us to work with you to find a solution that works.
 			  <br /><br />
 			  For businesses that require regular support, we can offer tailored ongoing
 			  support arrangements designed to provide priority assistance and improved
