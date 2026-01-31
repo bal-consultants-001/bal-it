@@ -92,7 +92,7 @@ export default function Home() {
 
 		<div
 		  id="image"
-		  className="relative w-full aspect-[16/9] md:aspect-[21/9]"
+		  className="relative w-full aspect-[24/9] md:aspect-[24/9]"
 		>
 		  <Image
 			src="/images/backdrop.jpg"
