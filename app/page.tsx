@@ -59,7 +59,7 @@ export default function Home() {
 		  <div className="absolute inset-0 shadow-[inset_0_0_120px_rgba(0,0,0,0.45)]" />
 
 		  {/* Logo */}
-		  <div className="relative z-10 flex items-center justify-center h-full pt-14">
+		  <div className="relative z-10 flex items-center justify-center h-full pt-18">
 			<Image
 			  src="/images/bal-it-d.png"
 			  alt="BAL-IT"

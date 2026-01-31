@@ -82,7 +82,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`fixed top-[72px] left-0 w-full bg-white shadow-lg transform transition-transform duration-300 lg:hidden ${
+        className={`fixed top-[82px] left-0 w-full bg-white shadow-lg transform transition-transform duration-300 lg:hidden ${
           menuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -109,10 +109,10 @@ export default function Navbar() {
 			  onClick={() => setMenuOpen(false)}
 			  className="
 				mt-6
-				w-4/5
+				w-12/13
 				px-4
 				py-3
-				bg-blue-300
+				bg-blue-900
 				border-2
 				border-black
 				rounded
