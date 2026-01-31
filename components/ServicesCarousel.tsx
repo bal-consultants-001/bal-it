@@ -65,7 +65,7 @@ export default function ServicesCarousel({ children }: { children: React.ReactNo
       {/* LEFT ARROW */}
       <button
         onClick={() => scrollByAmount("left")}
-        className="md:hidden absolute left-1 top-1/2 -translate-y-1/2 z-10 bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm"
+        className="md:hidden absolute left-1 top-2/3 -translate-y-1/2 z-10 bg-white/60 text-black w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm"
         aria-label="Scroll left"
       >
         ‹
@@ -74,7 +74,7 @@ export default function ServicesCarousel({ children }: { children: React.ReactNo
       {/* RIGHT ARROW */}
       <button
         onClick={() => scrollByAmount("right")}
-        className="md:hidden absolute right-1 top-1/2 -translate-y-1/2 z-10 bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm"
+        className="md:hidden absolute right-1 top-2/3 -translate-y-1/2 z-10 bg-white/60 text-black w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm"
         aria-label="Scroll right"
       >
         ›

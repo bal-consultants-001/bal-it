@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Section from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
+import ServicesCarousel from "@/components/ServicesCarousel";
 import Image from "next/image";
 
 export default function Business() {
@@ -183,6 +184,7 @@ export default function Business() {
 
 
      <Section id="services" title="Business IT Services" className="bg-white">
+	  <ServicesCarousel>
 	  <div
 		className="
 		  flex gap-6 overflow-x-auto pb-4
@@ -268,6 +270,7 @@ export default function Business() {
 		</div>
 
 	  </div>
+	  </ServicesCarousel>
 	</Section>
 
 
