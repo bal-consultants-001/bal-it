@@ -197,7 +197,7 @@ export default function Home() {
 	  >
 
 		{/* Service 1 */}
-		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		<div className="min-w-[98%] snap-center shrink-0 w-[85%] sm:w-[70%] bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
 		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Friendly Home IT Support</h2>
 			<p>
@@ -212,7 +212,7 @@ export default function Home() {
 		</div>
 
 		{/* Service 2 */}
-		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		<div className="min-w-[98%] snap-center shrink-0 w-[85%] sm:w-[70%] bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
 		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Home Wi-Fi & Internet Issues</h2>
 			<p>
@@ -226,7 +226,7 @@ export default function Home() {
 		</div>
 
 		{/* Service 3 */}
-		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		<div className="min-w-[98%] snap-center shrink-0 w-[85%] sm:w-[70%] bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
 		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Device Setup & Tech Support</h2>
 			<p>
@@ -240,7 +240,7 @@ export default function Home() {
 		</div>
 
 		{/* Service 4 */}
-		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		<div className="min-w-[98%] snap-center shrink-0 w-[85%] sm:w-[70%] bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
 		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Personal Tech Help & Tuition</h2>
 			<p>
@@ -254,7 +254,7 @@ export default function Home() {
 		</div>
 
 		{/* Service 5 */}
-		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		<div className="min-w-[98%] snap-center shrink-0 w-[85%] sm:w-[70%] bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
 		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Virus Removal & Security</h2>
 			<p>
@@ -267,7 +267,7 @@ export default function Home() {
 		</div>
 
 		{/* Service 6 */}
-		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		<div className="min-w-[98%] snap-center shrink-0 w-[85%] sm:w-[70%] bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
 		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Online Safety Advice</h2>
 			<p>
@@ -281,7 +281,7 @@ export default function Home() {
 		</div>
 
 		{/* Service 7 */}
-		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		<div className="min-w-[98%] snap-center shrink-0 w-[85%] sm:w-[70%] bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
 		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Other Home Technology Support</h2>
 			<p>
