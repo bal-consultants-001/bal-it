@@ -4,10 +4,39 @@ import ContactForm from "@/components/ContactForm";
 import ServicesCarousel from "@/components/ServicesCarousel";
 import Image from "next/image";
 
-
 export default function Home() {
   return (
     <>
+	
+	<script
+	  type="application/ld+json"
+	  dangerouslySetInnerHTML={{
+		__html: JSON.stringify({
+		  "@context": "https://schema.org",
+		  "@type": "LocalBusiness",
+		  "@id": "https://www.bal-it.co.uk",
+		  name: "BAL-IT",
+		  image: "https://www.bal-it.co.uk/images/og-image.jpg",
+		  url: "https://www.bal-it.co.uk",
+		  telephone: "07721762696",
+		  email: "information@bal-it.co.uk",
+		  description:
+			"Friendly home and business IT support in South Wales. Remote and in-person help for computers, laptops, tablets and smartphones.",
+		  areaServed: {
+			"@type": "Place",
+			name: "South Wales, United Kingdom",
+		  },
+		  serviceType: [
+			"Home IT Support",
+			"PC and Laptop Repair",
+			"Wi-Fi and Internet Setup",
+			"Virus Removal",
+			"Remote IT Support",
+		  ],
+		}),
+	  }}
+	/>
+
       <Navbar />
 
 		<div

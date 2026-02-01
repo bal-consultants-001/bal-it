@@ -15,19 +15,81 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "BAL-IT | Home IT Support Services",
+  metadataBase: new URL("https://www.bal-it.co.uk"), // change if needed
+
+  title: {
+    default: "BAL-IT | Home & Business IT Support in South Wales",
+    template: "%s | BAL-IT IT Support",
+  },
+
   description:
-    "BAL-IT provides in-home and remote IT support for PCs, laptops, tablets, Android devices and limited Apple support.",
+    "BAL-IT provides friendly, professional in-home and remote IT support for laptops, PCs, tablets, Android phones and selected Apple devices across South Wales.",
+
   keywords: [
     "Home IT Support",
+    "Business IT Support",
     "PC Repair",
     "Laptop Support",
-    "Android Support",
-    "Remote IT Services",
+    "WiFi Help",
+    "Virus Removal",
+    "Remote IT Support",
+    "South Wales IT Support",
     "BAL-IT",
   ],
+
+  authors: [{ name: "BAL-IT" }],
+  creator: "BAL-IT",
+  publisher: "BAL-IT",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  openGraph: {
+    title: "BAL-IT | Home & Business IT Support",
+    description:
+      "Reliable home and business IT support in South Wales. Remote and in-person help for all your technology needs.",
+    url: "https://www.bal-it.co.uk",
+    siteName: "BAL-IT",
+    images: [
+      {
+        url: "/images/og-image.jpg", // put an image in /public/images
+        width: 1200,
+        height: 630,
+        alt: "BAL-IT Home and Business IT Support",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "BAL-IT | Home & Business IT Support",
+    description:
+      "Friendly, professional IT support for homes and businesses across South Wales.",
+    images: ["/images/og-image.jpg"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+
+  category: "technology",
 };
+
 
 export default function RootLayout({
   children,
