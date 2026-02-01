@@ -187,14 +187,6 @@ export default function Home() {
 
     <Section id="services" title="Services" className="bg-black">
 	  <ServicesCarousel>
-	  <div
-		className="
-		  flex gap-6 overflow-x-auto pb-4
-		  snap-x snap-mandatory
-		  md:block md:overflow-visible
-		  [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
-		"
-	  >
 
 		{/* Service 1 */}
 		<div className="min-w-[98%] snap-center shrink-0 w-[85%] sm:w-[70%] bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
@@ -293,7 +285,6 @@ export default function Home() {
 		  </div>
 		</div>
 
-	  </div>
 	  </ServicesCarousel>
 	</Section>
 
