@@ -185,17 +185,9 @@ export default function Business() {
 
      <Section id="services" title="Business IT Services" className="bg-white">
 	  <ServicesCarousel>
-	  <div
-		className="
-		  flex gap-6 overflow-x-auto pb-4
-		  snap-x snap-mandatory
-		  md:block md:overflow-visible
-		  [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
-		"
-	  >
 
 		{/* Service 1 */}
-		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		<div className="min-w-[98%] snap-center shrink-0 w-[85%] sm:w-[70%] bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
 		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Day-to-Day IT Support</h2>
 			<p>
@@ -210,7 +202,7 @@ export default function Business() {
 		</div>
 
 		{/* Service 2 */}
-		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		<div className="min-w-[98%] snap-center shrink-0 w-[85%] sm:w-[70%] bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
 		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Network & Infrastructure Support</h2>
 			<p>
@@ -225,7 +217,7 @@ export default function Business() {
 		</div>
 
 		{/* Service 3 */}
-		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		<div className="min-w-[98%] snap-center shrink-0 w-[85%] sm:w-[70%] bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
 		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Cyber Security & Data Protection</h2>
 			<p>
@@ -240,7 +232,7 @@ export default function Business() {
 		</div>
 
 		{/* Service 4 */}
-		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		<div className="min-w-[98%] snap-center shrink-0 w-[85%] sm:w-[70%] bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
 		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Cloud Services</h2>
 			<p>
@@ -255,7 +247,7 @@ export default function Business() {
 		</div>
 
 		{/* Service 5 */}
-		<div className="min-w-[98%] snap-center bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
+		<div className="min-w-[98%] snap-center shrink-0 w-[85%] sm:w-[70%] bg-zinc-900 p-6 rounded-xl shadow-lg flex flex-col md:min-w-0 md:flex-row md:mb-6 md:bg-transparent md:shadow-none">
 		  <div className="text-white md:w-5/6">
 			<h2 className="font-bold text-xl mb-2">Project-Based IT Work</h2>
 			<p>
@@ -269,7 +261,6 @@ export default function Business() {
 		  </div>
 		</div>
 
-	  </div>
 	  </ServicesCarousel>
 	</Section>
 
