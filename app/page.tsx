@@ -331,7 +331,7 @@ export default function Home() {
 		  <p>
 			We offer a free 15 minute remote consultation where we discuss your needs and whether we are likely to be able to help.
 			Our standard pricing is £45/hour for remote and in person calls after that.
-			For in person visits, if you are more than 30 minutes from our facility in Llantwit Major we will charge an initial £15 (20 minutes) to cover transport cost, this will not be included in the first hour of support.
+			For in person visits, if you are more than 30 minutes from our facility in Llantwit Major we will charge an initial £15, this will not be included in the first hour of support.
 		  </p>
 		</ul>
 		<div className="py-6"></div>
